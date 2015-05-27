@@ -23,10 +23,10 @@
   </Settings>
   <Routines>
     <Routine name="end">
-      <TextComponent name="text_6">
+      <TextComponent name="end_text">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
         <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="text_6" valType="code" updates="None"/>
+        <Param name="name" val="end_text" valType="code" updates="None"/>
         <Param name="wrapWidth" val="" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
         <Param name="text" val="This was the end - Thank you!" valType="str" updates="constant"/>
@@ -43,10 +43,10 @@
         <Param name="font" val="Arial" valType="str" updates="constant"/>
         <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_6">
+      <KeyboardComponent name="end_key">
         <Param name="correctAns" val="" valType="str" updates="constant"/>
         <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="key_resp_6" valType="code" updates="None"/>
+        <Param name="name" val="end_key" valType="code" updates="None"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
@@ -59,14 +59,14 @@
         <Param name="store" val="last key" valType="str" updates="constant"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="key_3">
-      <TextComponent name="text_4">
+    <Routine name="key">
+      <TextComponent name="text_3">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
         <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="text_4" valType="code" updates="None"/>
+        <Param name="name" val="text_3" valType="code" updates="None"/>
         <Param name="wrapWidth" val="" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Try to keep focusing on the crosshair!" valType="str" updates="constant"/>
+        <Param name="text" val="Any text&#10;&#10;including line breaks" valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -80,10 +80,10 @@
         <Param name="font" val="Arial" valType="str" updates="constant"/>
         <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_4">
+      <KeyboardComponent name="key_resp_3">
         <Param name="correctAns" val="" valType="str" updates="constant"/>
         <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="key_resp_4" valType="code" updates="None"/>
+        <Param name="name" val="key_resp_3" valType="code" updates="None"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
@@ -106,28 +106,42 @@
         <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
       </CodeComponent>
     </Routine>
-    <Routine name="do_audio">
-      <CodeComponent name="audio_stim">
-        <Param name="Begin Experiment" val="import threading&#10;import time&#10;&#10;&#10;# define my dict.&#10;sounds={'left':{'40':sound.Sound('audio_40Hz_L.wav', secs=-1),'55':sound.Sound('audio_55Hz_L.wav', secs=-1)},'right':{'40':sound.Sound('audio_40Hz_R.wav', secs=-1),'55':sound.Sound('audio_55Hz_R.wav', secs=-1)}}&#10;&#10;# initiate my sounds...&#10;sounds['left']['40'] = sound.Sound('audio_40Hz_L.wav', secs=-1)&#10;sounds['left']['40'].setVolume(1)&#10;&#10;sounds['right']['40'] = sound.Sound('audio_40Hz_R.wav', secs=-1)&#10;sounds['right']['40'].setVolume(1)&#10;&#10;sounds['left']['55'] = sound.Sound('audio_55Hz_L.wav', secs=-1)&#10;sounds['left']['55'].setVolume(1)&#10;&#10;sounds['right']['55'] = sound.Sound('audio_55Hz_R.wav', secs=-1)&#10;sounds['right']['55'].setVolume(1)&#10;&#10;&#10;class play_audio_stim(threading.Thread):&#10;    def __init__(self,sounds,side,freq):&#10;        threading.Thread.__init__(self)&#10;        self.side=side&#10;        self.freq=freq&#10;        self.sounds=sounds&#10;        self.isstarted=0&#10;    def run(self):&#10;        print('started audio thread...')&#10;        self.isstarted=1&#10;        start_time=time.time()&#10;        sounds=self.sounds&#10;        freq=self.freq&#10;        side=self.side&#10;&#10;        # current_time = time.time() - start_time&#10;        # print current_time&#10;        my_sound = sounds[side][freq]&#10;        my_sound.play()&#10;        # ... aaand... we neatly wait untill the sound has been finished!&#10;        time.sleep(my_sound.getDuration())&#10;        current_time = time.time() - start_time&#10;        print '---'&#10;        print current_time&#10;&#10;        &#10;    def isStarted(self):&#10;        return self.isstarted" valType="extendedCode" updates="constant"/>
-        <Param name="name" val="audio_stim" valType="code" updates="None"/>
-        <Param name="Begin Routine" val="# a = play_audio_stim(sounds,'right',55)&#10;# a.start()&#10;" valType="extendedCode" updates="constant"/>
-        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
-        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
-        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
-      </CodeComponent>
-    </Routine>
-    <Routine name="play_audio">
-      <SoundComponent name="sound_1">
-        <Param name="sound" val="audio_40Hz_L.wav" valType="str" updates="constant"/>
-        <Param name="volume" val="1" valType="code" updates="constant"/>
-        <Param name="name" val="sound_1" valType="code" updates="None"/>
-        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
-        <Param name="durationEstim" val="1.0" valType="code" updates="None"/>
+    <Routine name="instr">
+      <TextComponent name="instr_text">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="instr_text" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="Try to keep focusing on the crosshair!" valType="str" updates="constant"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
         <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
         <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
         <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
         <Param name="startVal" val="0.0" valType="code" updates="None"/>
-      </SoundComponent>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <KeyboardComponent name="key_begin">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="key_begin" valType="code" updates="None"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'y','n','left','right','space'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="store" val="last key" valType="str" updates="constant"/>
+      </KeyboardComponent>
     </Routine>
     <Routine name="audio_55_L">
       <SoundComponent name="sound_3">
@@ -142,6 +156,30 @@
         <Param name="startVal" val="0.0" valType="code" updates="None"/>
       </SoundComponent>
     </Routine>
+    <Routine name="play_audio">
+      <SoundComponent name="sound_1">
+        <Param name="sound" val="audio_40Hz_L.wav" valType="str" updates="constant"/>
+        <Param name="volume" val="1" valType="code" updates="constant"/>
+        <Param name="name" val="sound_1" valType="code" updates="None"/>
+        <Param name="stopVal" val="1.0" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="1.0" valType="code" updates="None"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+      </SoundComponent>
+    </Routine>
+    <Routine name="do_audio">
+      <CodeComponent name="audio_stim">
+        <Param name="Begin Experiment" val="import threading&#10;import time&#10;&#10;&#10;# define my dict.&#10;sounds={'left':{'40':sound.Sound('stim/audio_40Hz_L.wav', secs=-1),'55':sound.Sound('stim/audio_55Hz_L.wav', secs=-1)},'right':{'40':sound.Sound('stim/audio_40Hz_R.wav', secs=-1),'55':sound.Sound('stim/audio_55Hz_R.wav', secs=-1)}}&#10;&#10;# initiate my volumes...&#10;sounds['left']['40'].setVolume(1)&#10;sounds['right']['40'].setVolume(1)&#10;sounds['left']['55'].setVolume(1)&#10;sounds['right']['55'].setVolume(1)&#10;&#10;&#10;class play_audio_stim(threading.Thread):&#10;    def __init__(self,sounds,side,freq):&#10;        threading.Thread.__init__(self)&#10;        self.side=side&#10;        self.freq=freq&#10;        self.sounds=sounds&#10;        self.isstarted=0&#10;    def run(self):&#10;        print('started audio thread...')&#10;        self.isstarted=1&#10;        start_time=time.time()&#10;        sounds=self.sounds&#10;        freq=self.freq&#10;        side=self.side&#10;&#10;        # current_time = time.time() - start_time&#10;        # print current_time&#10;        my_sound = sounds[side][freq]&#10;        my_sound.play()&#10;        # ... aaand... we neatly wait untill the sound has been finished!&#10;        time.sleep(my_sound.getDuration())&#10;        current_time = time.time() - start_time&#10;        print '---'&#10;        print current_time&#10;&#10;        &#10;    def isStarted(self):&#10;        return self.isstarted" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="audio_stim" valType="code" updates="None"/>
+        <Param name="Begin Routine" val="# a = play_audio_stim(sounds,'right',55)&#10;# a.start()&#10;" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="instructions_2"/>
     <Routine name="audio_40_R">
       <SoundComponent name="sound_2">
         <Param name="sound" val="audio_40Hz_R.wav" valType="str" updates="constant"/>
@@ -216,14 +254,14 @@
         <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
       </CodeComponent>
     </Routine>
-    <Routine name="key">
-      <TextComponent name="text_3">
+    <Routine name="key_3">
+      <TextComponent name="instructions">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
         <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="text_3" valType="code" updates="None"/>
+        <Param name="name" val="instructions" valType="code" updates="None"/>
         <Param name="wrapWidth" val="" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Any text&#10;&#10;including line breaks" valType="str" updates="constant"/>
+        <Param name="text" val="Try to keep focusing on the crosshair!" valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -237,10 +275,10 @@
         <Param name="font" val="Arial" valType="str" updates="constant"/>
         <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_3">
+      <KeyboardComponent name="key_resp_4">
         <Param name="correctAns" val="" valType="str" updates="constant"/>
         <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="key_resp_3" valType="code" updates="None"/>
+        <Param name="name" val="key_resp_4" valType="code" updates="None"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
@@ -255,9 +293,9 @@
     </Routine>
     <Routine name="key_2"/>
     <Routine name="do_letters">
-      <CodeComponent name="code_2">
+      <CodeComponent name="letter_stim">
         <Param name="Begin Experiment" val="text_stim = visual.TextStim(win=win, ori=0, name='text_4',&#10;    text='X',    font=u'Arial',&#10;    pos=[0, 0], height=0.1, wrapWidth=None,&#10;    color=u'white', colorSpace='rgb', opacity=1,&#10;    depth=0.0)&#10;&#10;&#10;# quick and dirty shift function. Matlab has got its own built-in 'circshift' - I need to do it like this, now.&#10;import random # if I didn't , already! - or if psychopy didn't , already.&#10;def shift(seq, n):&#10;    n = n % len(seq)&#10;    return seq[n:] + seq[:n]&#10;&#10;# doesn't matter if it's a set or if it's a list, for our purposes&#10;# list comprehension uppercase trick:&#10;letters_for_letter_stream = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']&#10;letters_for_letter_stream = [x.lower() for x in letters_for_letter_stream]&#10;&#10;&#10;# the letter_stream could be done better and made more general. Now it's too focussed on 'letters', but it should be really focussed on 'characters' or 'strings', or whatever kind of elements may be.&#10;# the only thing is - in psychopy, it's not that easy to search-and-replace. In matlab it would've been quicker (for now). Program it in Spyder.. seems to be interesting!&#10;&#10;class letter_stream(threading.Thread):&#10;    def __init__(self,letters,switch_frequency,switch_probability):&#10;        threading.Thread.__init__(self)&#10;&#10;        self.letters=letters&#10;        self.flag = 0&#10;        self.switch_frequency=switch_frequency&#10;        self.switch_probability = switch_probability&#10;        self.isstarted=0&#10;        self.current_letter='X'&#10;        self.stop = 0&#10;&#10;&#10;    def run(self):&#10;        print('started letter thread...')&#10;        self.isstarted=1&#10;        start_time=time.time()&#10;&#10;        letters=self.letters&#10;        switch_frequency=self.switch_frequency&#10;        switch_probability=self.switch_probability&#10;&#10;&#10;        cal_time = time.time()&#10;        # keep on doing this - until the end of the experiment, when I 'quit' the CORE:&#10;        while True:&#10;&#10;            # if the time bigger than the 'cal' time:&#10;            if time.time() - cal_time &gt; 0:&#10;                # effecively, only run this code-block once every letter_time_interval:&#10;                cal_time = cal_time + switch_frequency&#10;                # switch the letter - according to the given chance:&#10;                if random.random() &lt; switch_probability:&#10;                    letters = shift(letters,-1)&#10;                else:&#10;                    letters = shift(letters,1)&#10;                # set the 'current' letter.&#10;                self.current_letter = letters[0]&#10;                # set the flag, too.&#10;                self.flag = 1&#10;            &#10;            # sleep - for only a short time.&#10;            time.sleep(0.01)&#10;    &#10;            if self.stop:&#10;                break&#10;&#10;&#10;&#10;    def getLetter(self):&#10;        return self.current_letter&#10;&#10;    def isStarted(self):&#10;        return self.isstarted&#10;&#10;    def queryFlag(self):&#10;        if self.flag==1:&#10;            self.flag = 0&#10;            return 1&#10;        else:&#10;            return 0&#10;&#10;    def setStop(self):&#10;        self.stop=1&#10;" valType="extendedCode" updates="constant"/>
-        <Param name="name" val="code_2" valType="code" updates="None"/>
+        <Param name="name" val="letter_stim" valType="code" updates="None"/>
         <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
         <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
         <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
@@ -317,7 +355,7 @@
     <Routine name="do_video"/>
     <Routine name="do_audio"/>
     <Routine name="do_letters"/>
-    <Routine name="key_3"/>
+    <Routine name="instr"/>
     <Routine name="main_routine"/>
     <Routine name="end"/>
   </Flow>
