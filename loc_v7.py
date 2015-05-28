@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 19:15
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 21:34
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -45,7 +45,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=(1920, 1200), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -67,9 +67,23 @@ import copy
 # initiate my visual stimuli:
 vis_times={'8':[0.001,0.111, 0.253,0.373,0.475, 0.600],'13':[0.001,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}
 
-visual_evt_codes={'left':{'8':81,'13':131},'right':{'8':82,'13':132}}
+# so these are the individual STIMS (which we don't have for audio)
+visual_evt_codes={'left':{'8':87,'13':137},'right':{'8':88,'13':138}}
+
+# these are markers for the frequency analysis
 visual_evt_codes_begin={'left':{'8':83,'13':133},'right':{'8':84,'13':134}}
 visual_evt_codes_end={'left':{'8':85,'13':135},'right':{'8':86,'13':136}}
+
+# these are the thread starts - which conveniently also denotify what your visual segments
+# should BE - in case you wish to reconstruct the visual ERP
+global visual_evt_codes_beginvisthread
+visual_evt_codes_beginvisthread={'left':{'8':81,'13':131},'right':{'8':82,'13':132}}
+
+
+# for audio - we need to actually insert ADDITIONAL markers denotifying the start and end of each segment.
+# AND (!) also denotify the start and end of each click - but this will be done later in MATLAB. I guess.
+# we need to find the correct sequence, for this. 
+# reconstruct these from the MATLAB data.
 
 
 class play_vis_stim(threading.Thread):
@@ -96,6 +110,8 @@ class play_vis_stim(threading.Thread):
 
         start_time=time.time()
         target_time = hit_times.pop(0)
+
+        evt.send(visual_evt_codes_beginvisthread[side][freq])
 
         while True:
             current_time = time.time() - start_time
@@ -209,9 +225,11 @@ def shift(seq, n):
     return seq[n:] + seq[:n]
 
 # doesn't matter if it's a set or if it's a list, for our purposes
-letters_for_letter_stream = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+# letters_for_letter_stream = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+# letters_for_letter_stream = [x.upper() for x in letters_for_letter_stream]
+letters_for_letter_stream = ['0','1','2','3','4','5','6','7','8','9']
 # list comprehension uppercase trick:
-letters_for_letter_stream = [x.upper() for x in letters_for_letter_stream]
+
 
 # another thing to think about: setting a 'DEFAULT' input parameter (like NONE?) - how to do that?
 # the letter_stream could be done better and made more general. Now it's too focussed on 'letters', but it should be really focussed on 'characters' or 'strings', or whatever kind of elements may be.
@@ -263,7 +281,7 @@ class letter_stream(threading.Thread):
                     new_lim = 1+round(random.random()*3+2) # between 3 and 6 = the ISI - at LEAST
                     lastoddball = 0
                     letter_direction = letter_direction*-1
-                    letters = shift(letters,-1)
+                    # letters = shift(letters,-1)
                     self.type = 'oddball'
                 else:
                     lastoddball = lastoddball + 1
@@ -439,12 +457,16 @@ class ev_thread(threading.Thread):
         # do the init stuff separately (necessary) - makes you work for it
         self.sender.init()
         
-        # for clean exit
+        # for clean exit - set to 0 now, of course.
         self.stop_thread = 0
 
-        
-    def run(self):
 
+    # so what should this thread do??
+    # -- ! just remain on the background at all times.
+    # as event handler, I can also try to implement a text thingy.
+    # then I can yield a LIST of output modalities
+    # ... if asked for this.
+    def run(self):
 
         # keep on doing this - unless the stop signal has been given.
         while True:
@@ -465,13 +487,13 @@ class ev_thread(threading.Thread):
             # arrange for a clean exit
             if self.stop_thread == 1:
                 # disconnect, etc etc:
-                self.sender.stop()
+                self.sender.finish() # yes - well, I don't call it stop, just to be totally tegendraads.
                 # then - exit this loop.
                 break
             
             # make sure the processor doens't take it all up!
             # allow for 1 msec time inaccuracy, too.
-            time.sleep(0.001)
+            time.sleep(0.0005)
 
     def send(self,ev):
         # just append it to the list - so it'll be taken off in the main while loop.
@@ -481,9 +503,9 @@ class ev_thread(threading.Thread):
     def stop(self):
         self.stop_thread = 1
 select_eeg_system = visual.TextStim(win=win, ori=0, name='select_eeg_system',
-    text=u"What is your EEG system?\n\n1) Nothing (don't send triggers)\n\n2) EGI\n\n3) Brain Products",    font=u'Arial',
+    text="What is your EEG system?\n\n1) Nothing (don't send triggers)\n\n2) EGI\n\n3) Brain Products",    font='Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-1.0)
 
 
@@ -536,7 +558,7 @@ left_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2,
 
   
 # fixation dot
-fixation = visual.PatchStim(win, color=-0.5, colorSpace='rgb', tex=None,
+fixation = visual.PatchStim(win, color=-0.25, colorSpace='rgb', tex=None,
                             mask='circle', size=0.12)
 
 
@@ -600,13 +622,22 @@ def showCheckerboard(win,vis_contents):
     return new_vis_contents
     
 
-def textFlip(win,vis_contents):
+def textFlip(win,vis_contents,video_is_running):
     # well - this could use some improvements - in conceptualization.
     # the checkerboard_hidden could be done better.
     # that's what you get when you are programming quick -n- dirty.
-    for item in vis_contents:
-        item.draw()
-    win.flip()
+   
+    # if the checkerboard is doing stuff - then just let the checkerboard refresh also the letter.
+    # in there, there's all the draw methods that u need!
+    # otherwise - do it ourselves.
+    # print video_is_running
+    if video_is_running:
+        pass
+    else:
+        # print(len(vis_contents))
+        for item in vis_contents:
+            item.draw()
+        win.flip()
 
 
 # Initialize components for Routine "end"
@@ -1156,7 +1187,7 @@ while True:
 
         text_stim.text=letter
         text_stim.text=text_stim.text # according to suggestion??
-        textFlip(win,new_vis_contents)
+        textFlip(win,new_vis_contents,video_is_running)
         
 
     # ADD-ON which only works in psychopy?
