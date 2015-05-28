@@ -1,0 +1,58 @@
+17.6123 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+17.6281 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x0889FD28>, name='window1', pos=[0, 0], screen=0, size=array([1920, 1200]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+17.6282 	EXP 	window1: recordFrameIntervals = False
+17.9963 	EXP 	window1: recordFrameIntervals = True
+18.0738 	WARNING 	t of last frame was 32.14ms (=1/31)
+18.1064 	WARNING 	t of last frame was 32.60ms (=1/30)
+18.1397 	WARNING 	t of last frame was 33.32ms (=1/30)
+18.1747 	WARNING 	t of last frame was 35.01ms (=1/28)
+18.2057 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+19.9856 	DATA 	Mouse: Left button down, pos=(956,688)
+20.0218 	DATA 	Mouse: Left button up, pos=(956,688)
+21.4498 	WARNING 	Couldn't measure a consistent frame rate.
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+22.0346 	EXP 	Set  sound=stim/audio_40Hz_L.wav
+22.0410 	EXP 	Set  sound=stim/audio_55Hz_L.wav
+22.0456 	EXP 	Set  sound=stim/audio_40Hz_R.wav
+22.0514 	EXP 	Set  sound=stim/audio_55Hz_R.wav
+22.0515 	EXP 	Set Sound  volume=1.000
+22.0515 	EXP 	Set Sound  volume=1.000
+22.0516 	EXP 	Set Sound  volume=1.000
+22.0516 	EXP 	Set Sound  volume=1.000
+22.3384 	EXP 	Created text_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='text_4', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'X', units=u'norm', win=Window(...), wrapWidth=1)
+22.6135 	EXP 	Created select_eeg_system = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='select_eeg_system', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+22.6932 	EXP 	Created instr_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='instr_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Try to keep focusing on the crosshair!', units=u'norm', win=Window(...), wrapWidth=1)
+22.7533 	EXP 	Created unnamed PatchStim = PatchStim(autoDraw=False, autoLog=True, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0, interpolate=False, mask='circle', maskParams=None, name='unnamed PatchStim', opacity=1.0, ori=0.0, phase=array([ 0.,  0.]), pos=array([ 0.,  0.]), rgbPedestal=array([ 0.,  0.,  0.]), sf=array([ 1.,  1.]), size=array([ 0.12,  0.12]), tex=None, texRes=128, units=u'norm', win=Window(...))
+22.8226 	EXP 	Created end_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='end_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'This was the end - Thank you!', units=u'norm', win=Window(...), wrapWidth=1)
+22.8573 	EXP 	select_eeg_system: autoDraw = True
+23.7438 	DATA 	Keypress: 1
+23.7765 	EXP 	select_eeg_system: autoDraw = False
+23.7765 	EXP 	instr_text: autoDraw = True
+25.4718 	DATA 	Keypress: space
+25.5215 	EXP 	instr_text: autoDraw = False
+26.5817 	EXP 	text_4: text = 'B'
+26.5817 	EXP 	text_4: text = u'B'
+26.6391 	EXP 	text_4: text = 'C'
+26.6391 	EXP 	text_4: text = u'C'
+27.6058 	EXP 	text_4: text = 'D'
+27.6058 	EXP 	text_4: text = u'D'
+28.5877 	EXP 	text_4: text = 'E'
+28.5877 	EXP 	text_4: text = u'E'
+29.5879 	EXP 	text_4: text = 'F'
+29.5879 	EXP 	text_4: text = u'F'
+30.5750 	EXP 	text_4: text = 'D'
+30.5750 	EXP 	text_4: text = u'D'
+31.6928 	EXP 	text_4: text = 'C'
+31.6928 	EXP 	text_4: text = u'C'
+32.5886 	EXP 	text_4: text = 'B'
+32.5886 	EXP 	text_4: text = u'B'
+33.5875 	EXP 	text_4: text = 'A'
+33.5875 	EXP 	text_4: text = u'A'
+34.5733 	EXP 	text_4: text = 'Z'
+34.5733 	EXP 	text_4: text = u'Z'
+34.7658 	DATA 	Keypress: escape

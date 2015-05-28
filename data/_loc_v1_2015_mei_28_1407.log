@@ -1,0 +1,36 @@
+10.2360 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x08991BE8>, name='window1', pos=[0, 0], screen=0, size=array([1920, 1200]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.2361 	EXP 	window1: recordFrameIntervals = False
+10.5719 	EXP 	window1: recordFrameIntervals = True
+11.4128 	WARNING 	t of last frame was 41.80ms (=1/23)
+11.5465 	WARNING 	t of last frame was 42.04ms (=1/23)
+12.1843 	EXP 	window1: recordFrameIntervals = False
+12.7194 	EXP 	Set  sound=stim/audio_40Hz_L.wav
+12.7214 	EXP 	Set  sound=stim/audio_55Hz_L.wav
+12.7226 	EXP 	Set  sound=stim/audio_40Hz_R.wav
+12.7247 	EXP 	Set  sound=stim/audio_55Hz_R.wav
+12.7248 	EXP 	Set Sound  volume=1.000
+12.7248 	EXP 	Set Sound  volume=1.000
+12.7248 	EXP 	Set Sound  volume=1.000
+12.7249 	EXP 	Set Sound  volume=1.000
+12.9665 	EXP 	Created text_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='text_4', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'X', units=u'norm', win=Window(...), wrapWidth=1)
+13.1971 	EXP 	Created select_eeg_system = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='select_eeg_system', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+13.2750 	EXP 	Created instr_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='instr_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Try to keep focusing on the crosshair!', units=u'norm', win=Window(...), wrapWidth=1)
+13.3264 	EXP 	Created unnamed PatchStim = PatchStim(autoDraw=False, autoLog=True, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0, interpolate=False, mask='circle', maskParams=None, name='unnamed PatchStim', opacity=1.0, ori=0.0, phase=array([ 0.,  0.]), pos=array([ 0.,  0.]), rgbPedestal=array([ 0.,  0.,  0.]), sf=array([ 1.,  1.]), size=array([ 0.1,  0.1]), tex=None, texRes=128, units=u'norm', win=Window(...))
+13.3837 	EXP 	Created end_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='end_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'This was the end - Thank you!', units=u'norm', win=Window(...), wrapWidth=1)
+13.4228 	EXP 	select_eeg_system: autoDraw = True
+14.7484 	DATA 	Keypress: 2
+14.7813 	EXP 	select_eeg_system: autoDraw = False
+14.7813 	EXP 	instr_text: autoDraw = True
+16.9885 	DATA 	Keypress: space
+17.0320 	EXP 	instr_text: autoDraw = False
+17.0899 	EXP 	text_4: text = 'b'
+17.0899 	EXP 	text_4: text = u'b'
+18.0890 	EXP 	text_4: text = 'c'
+18.0890 	EXP 	text_4: text = u'c'
+19.1057 	EXP 	text_4: text = 'd'
+19.1057 	EXP 	text_4: text = u'd'
+19.3091 	DATA 	Keypress: lctrl
+19.5012 	DATA 	Keypress: c
+20.0730 	EXP 	text_4: text = 'e'
+20.0730 	EXP 	text_4: text = u'e'
+20.2690 	DATA 	Keypress: escape

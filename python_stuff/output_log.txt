@@ -1,0 +1,2384 @@
+Welkom bij PsychoPy2!
+v1.82.01
+
+##### Running: E:\Dropbox\OnderzoeksPlan\EnvironmentalEEG\eeg-fmri-localizer\loc_v7.py #####
+none
+none_sender: INITIALIZED
+event struct - initialized
+True
+started letter thread...
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 101
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 43
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.20199990273
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 83
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 101
+none_sender: sending: 81
+none_sender: sending: 45
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.20000004768
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 101
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 81
+none_sender: sending: 44
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 85
+none_sender: sending: 100
+---
+1.20300006866
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.20199990273
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 46
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20000004768
+none_sender: sending: 100
+none_sender: sending: 101
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 53
+none_sender: sending: 101
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 84
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 82
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+---
+1.40300011635
+started audio thread...
+none_sender: sending: 51
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+---
+1.40100002289
+none_sender: sending: 82
+none_sender: sending: 55
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 101
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 101
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 86
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 54
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 101
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 133
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+---
+1.40499997139
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 101
+none_sender: sending: 131
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40100002289
+none_sender: sending: 131
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 56
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+---
+1.40000009537
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 135
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 43
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 134
+none_sender: sending: 132
+none_sender: sending: 101
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+---
+1.20200014114
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20000004768
+started audio thread...none_sender: sending: 132
+
+none_sender: sending: 41
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 101
+none_sender: sending: 132
+---
+1.20100021362
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20100021362
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+started visual thread...
+none_sender: sending: 132
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 136
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 45
+none_sender: sending: 100
+---
+1.19999980927
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 83
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 101
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 101
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 85
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 44
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20200014114
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 101
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 84
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.20100021362
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 101
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+---
+1.20000004768
+none_sender: sending: 82
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 86
+none_sender: sending: 46
+none_sender: sending: 100
+---
+1.20000004768
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 101
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 54
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40499997139
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 101
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 134
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.40600013733
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 56
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.39999985695
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 101
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+started audio thread...
+none_sender: sending: 53
+none_sender: sending: 51
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 101
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 136
+none_sender: sending: 100
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 55
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40100002289
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 101
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 54
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 100
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 133
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 101
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+---
+1.40199995041
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 52
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 52
+none_sender: sending: 56
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40100002289
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 135
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 43
+none_sender: sending: 101
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.20100021362
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 100
+none_sender: sending: 101
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 134
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.20100021362
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.2009999752
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 41
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 45
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+---
+1.2009999752
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 101
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+none_sender: sending: 132
+started visual thread...
+none_sender: sending: 132
+none_sender: sending: 132
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 136
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 101
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 44
+none_sender: sending: 101
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 83
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+---
+1.20200014114
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100---
+
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 100
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+none_sender: sending: 81
+---
+1.19999980927
+started audio thread...
+none_sender: sending: 42
+started visual thread...
+none_sender: sending: 81
+none_sender: sending: 81
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 85
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 100
+---
+1.2009999752
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 101
+---
+1.20000004768
+started audio thread...
+none_sender: sending: 42
+none_sender: sending: 46
+none_sender: sending: 100
+---
+1.20000004768
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 84
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 101
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 101
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+none_sender: sending: 82
+started visual thread...
+none_sender: sending: 82
+none_sender: sending: 82
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 86
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 53
+none_sender: sending: 100
+---
+1.40199995041
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+none_sender: sending: 101
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+ -- ENABLE CHECKERBOARD
+started visual thread...
+none_sender: sending: 133
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 101
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40000009537
+started audio thread...
+none_sender: sending: 51
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 100
+---
+1.39999985695
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 131
+---
+1.40100002289
+started audio thread...
+none_sender: sending: 51
+none_sender: sending: 131
+started visual thread...
+none_sender: sending: 131
+none_sender: sending: 131
+none_sender: sending: 100
+ -- DISABLE CHECKERBOARD
+none_sender: sending: 135
+none_sender: sending: 55
+none_sender: sending: 100
+---
+1.40000009537
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 101
+none_sender: sending: 100
+none_sender: sending: 100
+none_sender: sending: 100
+Exception in thread Thread-1:

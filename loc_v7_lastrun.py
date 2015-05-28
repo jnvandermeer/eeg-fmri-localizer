@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 14:07
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 17:53
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -33,7 +33,7 @@ filename = _thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant'], expName
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=None,
+    originPath=u'E:\\Dropbox\\OnderzoeksPlan\\EnvironmentalEEG\\eeg-fmri-localizer\\loc_v7.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info
@@ -67,9 +67,13 @@ import copy
 # initiate my visual stimuli:
 vis_times={'8':[0.001,0.111, 0.253,0.373,0.475, 0.600],'13':[0.001,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}
 
+visual_evt_codes={'left':{'8':81,'13':131},'right':{'8':82,'13':132}}
+visual_evt_codes_begin={'left':{'8':83,'13':133},'right':{'8':84,'13':134}}
+visual_evt_codes_end={'left':{'8':85,'13':135},'right':{'8':86,'13':136}}
+
 
 class play_vis_stim(threading.Thread):
-    def __init__(self,vis_times,side,freq):
+    def __init__(self,vis_times,side,freq,evt):
         threading.Thread.__init__(self)
         self.win=win
         # is this it?
@@ -77,6 +81,7 @@ class play_vis_stim(threading.Thread):
         self.side=side
         self.flash=0
         self.isstarted=0
+        self.freq = freq
 
 
     def run(self):
@@ -123,6 +128,9 @@ class play_vis_stim(threading.Thread):
     def isStarted(self):
         return self.isstarted
 
+    def getFreq(self):
+        return self.freq
+
 # Initialize components for Routine "do_audio"
 do_audioClock = core.Clock()
 import threading
@@ -138,9 +146,14 @@ sounds['right']['40'].setVolume(1)
 sounds['left']['55'].setVolume(1)
 sounds['right']['55'].setVolume(1)
 
+# for later, too.
+audio_evt_codes={'left':{'40':41,'55':51},'right':{'40':42,'55':52}}
+audio_evt_codes_begin={'left':{'40':43,'55':53},'right':{'40':44,'55':54}}
+audio_evt_codes_end={'left':{'40':45,'55':55},'right':{'40':46,'55':56}}
+
 
 class play_audio_stim(threading.Thread):
-    def __init__(self,sounds,side,freq):
+    def __init__(self,sounds,side,freq,evt):
         threading.Thread.__init__(self)
         self.side=side
         self.freq=freq
@@ -153,6 +166,10 @@ class play_audio_stim(threading.Thread):
         sounds=self.sounds
         freq=self.freq
         side=self.side
+
+        # send the code here to external device using my own object - then proceed by playing the sound
+        evt.send(audio_evt_codes[side][freq])
+
 
         # current_time = time.time() - start_time
         # print current_time
@@ -168,14 +185,22 @@ class play_audio_stim(threading.Thread):
     def isStarted(self):
         return self.isstarted
 
+    def getSide(self):
+        return self.side
+
+    def getFreq(self):
+        return self.freq
+
 # Initialize components for Routine "do_letters"
 do_lettersClock = core.Clock()
 text_stim = visual.TextStim(win=win, ori=0, name='text_4',
     text='X',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color=u'red', colorSpace='rgb', opacity=1,
     depth=0.0)
 
+# txt event codes - declaration
+txt_evt_codes = {'normal':100, 'oddball':101}
 
 # quick and dirty shift function. Matlab has got its own built-in 'circshift' - I need to do it like this, now.
 import random # if I didn't , already! - or if psychopy didn't , already.
@@ -184,16 +209,16 @@ def shift(seq, n):
     return seq[n:] + seq[:n]
 
 # doesn't matter if it's a set or if it's a list, for our purposes
-# list comprehension uppercase trick:
 letters_for_letter_stream = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-letters_for_letter_stream = [x.lower() for x in letters_for_letter_stream]
+# list comprehension uppercase trick:
+letters_for_letter_stream = [x.upper() for x in letters_for_letter_stream]
 
-
+# another thing to think about: setting a 'DEFAULT' input parameter (like NONE?) - how to do that?
 # the letter_stream could be done better and made more general. Now it's too focussed on 'letters', but it should be really focussed on 'characters' or 'strings', or whatever kind of elements may be.
 # the only thing is - in psychopy, it's not that easy to search-and-replace. In matlab it would've been quicker (for now). Program it in Spyder.. seems to be interesting!
 
 class letter_stream(threading.Thread):
-    def __init__(self,letters,switch_frequency,switch_probability):
+    def __init__(self,letters,switch_frequency,switch_probability,evt):
         threading.Thread.__init__(self)
 
         self.letters=letters
@@ -203,6 +228,7 @@ class letter_stream(threading.Thread):
         self.isstarted=0
         self.current_letter='X'
         self.stop = 0
+        self.type = 'normal'
 
 
     def run(self):
@@ -217,17 +243,32 @@ class letter_stream(threading.Thread):
 
         cal_time = time.time()
         # keep on doing this - until the end of the experiment, when I 'quit' the CORE:
+    
+        # beauty fix - start 1 sec after start of the experiment
+        time.sleep(1.0)
+
+        # somehow control that things don't go too fast (effectively reduces the % change of an oddball occurring
+        lastoddball = 0 # set counter to 0
+        new_lim = 4 # make sure no oddball happens IMMEDEATELY into the experiment:
+
         while True:
+
 
             # if the time bigger than the 'cal' time:
             if time.time() - cal_time > 0:
                 # effecively, only run this code-block once every letter_time_interval:
                 cal_time = cal_time + switch_frequency
                 # switch the letter - according to the given chance:
-                if random.random() < switch_probability:
+                if random.random() < switch_probability and lastoddball > new_lim:
+                    # make a (randomly chosen) ISI where nothing should happen.
+                    new_lim = 1+round(random.random()*3+2) # between 3 and 6 = the ISI - at LEAST
+                    lastoddball = 0
                     letters = shift(letters,-1)
+                    self.type = 'oddball'
                 else:
+                    lastoddball = lastoddball + 1
                     letters = shift(letters,1)
+                    self.type = 'normal'
                 # set the 'current' letter.
                 self.current_letter = letters[0]
                 # set the flag, too.
@@ -257,6 +298,8 @@ class letter_stream(threading.Thread):
     def setStop(self):
         self.stop=1
 
+    def getType(self):
+        return self.type
 
 # Initialize components for Routine "do_triggers"
 do_triggersClock = core.Clock()
@@ -313,6 +356,26 @@ import time
 # and THEN - I just use init, send and finish!!
 # maybe I could even make a super-class of this.
 # but not.. now..
+
+
+# use this nice 'dummy' class! - so that u have the object, but it doesn't do anything.
+class none_sender():
+    def __init__(self):
+        pass
+    
+    def init(self):
+        pass
+    
+    def send(self,ev):
+        print(ev)
+        # for me a print; normally:
+        pass
+    
+    def finish(self):
+        pass
+    
+
+
 class brain_products_sender():
     def __init__(self):
         pass
@@ -354,6 +417,7 @@ class egi_sender():
         ns.disconnect()
 
 
+
 # the MAIN class: ev_sender!
 class ev_thread(threading.Thread):
     
@@ -361,7 +425,7 @@ class ev_thread(threading.Thread):
     # it also inits for you - if needed
     def __init__(self,sender_obj):
         # overload..
-        threading.Thread.__init(self)
+        threading.Thread.__init__(self)
         # output_device can be either:
         # 'no_device'
         # 'egi'
@@ -399,7 +463,7 @@ class ev_thread(threading.Thread):
 
     def send(self,ev):
         # just append it to the list - so it'll be taken off in the main while loop.
-        self.ev.append(ev)
+        self.ev_list.append(ev)
         
         
     def stop(self):
@@ -422,6 +486,7 @@ instr_text = visual.TextStim(win=win, ori=0, name='instr_text',
 
 # Initialize components for Routine "main_routine"
 main_routineClock = core.Clock()
+
 # this code block has 2 functions - (1) control time flow of the experimen, and (2) control visual elements/flashes
 
 import time
@@ -882,6 +947,24 @@ t = 0
 main_routineClock.reset()  # clock 
 frameN = -1
 # update component parameters for each repeat
+# instantiate_ev_thread
+if eeg_system_used == 'none':
+    evt = ev_thread(none_sender())
+    
+
+elif eeg_system_used == 'bp':
+    evt = ev_thread(brain_products_sender())
+    
+
+elif eeg_system_used == 'egi':
+    evt = ev_thread(brain_egi_sender())
+    
+
+# start the evt loop!
+evt.start()
+
+# send stuff now - with evt.send(10), for example.
+# send it either in the main loop - or in the audio, video and letter threads - i passed the object over there, too.
 start_time=time.time()
 
 # to control for showing(or not(!)) the checkerboard, to it like this:
@@ -905,7 +988,7 @@ a_next = 0
 letter_switch_interval = 1.0 # seconds
 letter_switch_probability = 0.15 # 15 % change of switching the 'wrong' way = subjects have to press.
 # the letters list has been defined somewhere else (previously!)
-lstream = letter_stream(letters_for_letter_stream,letter_switch_interval,letter_switch_probability)
+lstream = letter_stream(letters_for_letter_stream,letter_switch_interval,letter_switch_probability,evt)
 lstream.start()
 
 
@@ -942,16 +1025,16 @@ while True:
             # only create the v_next, if its value is not the (int) 0 value - so do THIS at first iteration of the block.
             # so - at the start; make an thread - and start it - and make a new thread just after that, just in case
             if v_next==0:
-                v_current = play_vis_stim(vis_times,options[0],options[1])
+                v_current = play_vis_stim(vis_times,options[0],options[1],evt)
                 v_current.start()
-                v_next = play_vis_stim(vis_times,options[0],options[1])
+                v_next = play_vis_stim(vis_times,options[0],options[1],evt)
             else:
                 # when NOT at the start - cycle to the next one - start it - prepare the new one already.
                 # only start up the visual new thread once the current one is done (IF the task has a video element in it)
                 if not v_current.isAlive():     
                     v_current=v_next
                     v_current.start()
-                    v_next = play_vis_stim(vis_times,options[0],options[1])
+                    v_next = play_vis_stim(vis_times,options[0],options[1],evt)
 
 
         # handle the 'audio:
@@ -963,14 +1046,15 @@ while True:
 
             # same handling for audio.
             if a_next==0:
-                a_current=play_audio_stim(sounds,options[0],options[1])
+                a_current=play_audio_stim(sounds,options[0],options[1],evt)
                 a_current.start()
-                a_next=play_audio_stim(sounds,options[0],options[1])
+                a_next=play_audio_stim(sounds,options[0],options[1],evt)
             else:
                 if not a_current.isAlive():                
                     a_current = a_next
                     a_current.start()
-                    a_next=play_audio_stim(sounds,options[0],options[1])
+                    # send a trig! - let the audio do it, itself - no need to clog my code here.
+                    a_next=play_audio_stim(sounds,options[0],options[1],evt)
                     
 
 
@@ -1002,10 +1086,43 @@ while True:
         if v_current.queryFlash():
             # do the flash
             side = v_current.getSide()
-            doFlash(win,vis_contents,side)
+            freq = v_current.getFreq()
+            # send a code indicating a flash to my evt handler object thread - fire & forget..?
+            evt.send(visual_evt_codes[side][freq])
+            doFlash(win,vis_contents,side,freq)
 
             # reset the flash value - and continue:
             v_current.resetFlash()
+
+
+
+
+    # and now - handle the beginning and endings of audio and visual; according to the example above.
+    # long-winded code block to resolve events:
+    # what's happening should be straightforward.
+    if video_was_running and not video_is_running:
+        # send a video end marker
+        freq = v_current.getFreq()
+        side = v_current.getSide()
+        evt.send(visual_evt_codes_end[side][freq])
+
+    if video_is_running and not video_was_running:
+        # send a video begin marker
+        freq = v_current.getFreq()
+        side = v_current.getSide()
+        evt.send(visual_evt_codes_begin[side][freq])
+
+    if audio_was_running and not audio_is_running:
+        # send an audio end marker
+        freq = a_current.getFreq()
+        side = a_current.getSide()
+        evt.send(audio_evt_codes_end[side][freq])
+
+    if audio_is_running and not audio_was_running:
+        # send an audio begin marker
+        freq = a_current.getFreq()
+        side = a_current.getSide()
+        evt.send(audio_evt_codes_begin[side][freq])
 
 
    # to keep track, do it like this:
@@ -1019,6 +1136,11 @@ while True:
     # resolve letter stream.
     if lstream.queryFlag():
         letter = lstream.getLetter()
+        ltype = lstream.getType()
+
+        # send my letter event!!
+        evt.send(txt_evt_codes[ltype])
+
         text_stim.text=letter
         text_stim.text=text_stim.text # according to suggestion??
         textFlip(win,new_vis_contents)
@@ -1028,7 +1150,10 @@ while True:
     # enable key break...
     # do the key
     if event.getKeys(keyList=["escape"]):
+        # stop my letter stream:
         lstream.setStop()
+        # stop my event handler:
+        evt.stop()
         core.quit()
         continueRoutine=False
 
@@ -1056,6 +1181,7 @@ while continueRoutine:
     # update/draw components on each frame
     
     
+    
     # check if all components have finished
     if not continueRoutine:  # a component has requested a forced-end of Routine
         break
@@ -1077,6 +1203,7 @@ while continueRoutine:
 for thisComponent in main_routineComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+
 
 # the Routine "main_routine" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
@@ -1168,6 +1295,9 @@ routineTimer.reset()
 
 
 
+# aand... stop the evt's - at the end of the experiment.
+# should be fine.. I hope.
+evt.stop()
 
 win.close()
 core.quit()

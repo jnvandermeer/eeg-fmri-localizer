@@ -1,0 +1,135 @@
+12.1367 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x0888FCB0>, name='window1', pos=[0, 0], screen=0, size=array([1920, 1200]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+12.1368 	EXP 	window1: recordFrameIntervals = False
+12.4665 	EXP 	window1: recordFrameIntervals = True
+12.7206 	WARNING 	t of last frame was 51.11ms (=1/19)
+13.1106 	WARNING 	t of last frame was 48.50ms (=1/20)
+13.1544 	WARNING 	t of last frame was 43.75ms (=1/22)
+14.4601 	EXP 	window1: recordFrameIntervals = False
+15.0745 	EXP 	Set  sound=stim/audio_40Hz_L.wav
+15.0808 	EXP 	Set  sound=stim/audio_55Hz_L.wav
+15.0853 	EXP 	Set  sound=stim/audio_40Hz_R.wav
+15.0904 	EXP 	Set  sound=stim/audio_55Hz_R.wav
+15.0905 	EXP 	Set Sound  volume=1.000
+15.0906 	EXP 	Set Sound  volume=1.000
+15.0906 	EXP 	Set Sound  volume=1.000
+15.0906 	EXP 	Set Sound  volume=1.000
+15.3922 	EXP 	Created text_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='text_4', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'X', units=u'norm', win=Window(...), wrapWidth=1)
+15.6153 	EXP 	Created select_eeg_system = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='select_eeg_system', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+15.6929 	EXP 	Created instr_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='instr_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'Try to keep focusing on the crosshair!', units=u'norm', win=Window(...), wrapWidth=1)
+15.7602 	EXP 	Created unnamed PatchStim = PatchStim(autoDraw=False, autoLog=True, color=array([-0.5, -0.5, -0.5]), colorSpace='rgb', contrast=1.0, depth=0, interpolate=False, mask='circle', maskParams=None, name='unnamed PatchStim', opacity=1.0, ori=0.0, phase=array([ 0.,  0.]), pos=array([ 0.,  0.]), rgbPedestal=array([ 0.,  0.,  0.]), sf=array([ 1.,  1.]), size=array([ 0.1,  0.1]), tex=None, texRes=128, units=u'norm', win=Window(...))
+15.8202 	EXP 	Created end_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='end_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'This was the end - Thank you!', units=u'norm', win=Window(...), wrapWidth=1)
+15.8683 	EXP 	select_eeg_system: autoDraw = True
+16.7820 	DATA 	Keypress: 1
+16.8225 	EXP 	select_eeg_system: autoDraw = False
+16.8225 	EXP 	instr_text: autoDraw = True
+19.9640 	DATA 	Keypress: space
+20.0123 	EXP 	instr_text: autoDraw = False
+21.0623 	EXP 	text_4: text = 'B'
+21.0623 	EXP 	text_4: text = u'B'
+21.1307 	EXP 	text_4: text = 'C'
+21.1307 	EXP 	text_4: text = u'C'
+22.0978 	EXP 	text_4: text = 'D'
+22.0978 	EXP 	text_4: text = u'D'
+23.0652 	EXP 	text_4: text = 'E'
+23.0652 	EXP 	text_4: text = u'E'
+24.0799 	EXP 	text_4: text = 'F'
+24.0799 	EXP 	text_4: text = u'F'
+25.0800 	EXP 	text_4: text = 'G'
+25.0800 	EXP 	text_4: text = u'G'
+26.1817 	EXP 	text_4: text = 'H'
+26.1817 	EXP 	text_4: text = u'H'
+27.0637 	EXP 	text_4: text = 'I'
+27.0637 	EXP 	text_4: text = u'I'
+28.0980 	EXP 	text_4: text = 'J'
+28.0980 	EXP 	text_4: text = u'J'
+29.0794 	EXP 	text_4: text = 'K'
+29.0794 	EXP 	text_4: text = u'K'
+29.9683 	EXP 	Sound  started
+30.0798 	EXP 	text_4: text = 'L'
+30.0798 	EXP 	text_4: text = u'L'
+31.0630 	EXP 	text_4: text = 'K'
+31.0630 	EXP 	text_4: text = u'K'
+31.1702 	EXP 	Sound  started
+32.0628 	EXP 	text_4: text = 'L'
+32.0628 	EXP 	text_4: text = u'L'
+32.3730 	EXP 	Sound  started
+33.0666 	EXP 	text_4: text = 'M'
+33.0666 	EXP 	text_4: text = u'M'
+33.5754 	EXP 	Sound  started
+34.0626 	EXP 	text_4: text = 'N'
+34.0626 	EXP 	text_4: text = u'N'
+34.7775 	EXP 	Sound  started
+35.0797 	EXP 	text_4: text = 'O'
+35.0797 	EXP 	text_4: text = u'O'
+35.9803 	EXP 	Sound  started
+36.0630 	EXP 	text_4: text = 'P'
+36.0630 	EXP 	text_4: text = u'P'
+37.0799 	EXP 	text_4: text = 'Q'
+37.0799 	EXP 	text_4: text = u'Q'
+37.1823 	EXP 	Sound  started
+38.1306 	EXP 	text_4: text = 'R'
+38.1306 	EXP 	text_4: text = u'R'
+38.3846 	EXP 	Sound  started
+39.2167 	EXP 	text_4: text = 'S'
+39.2167 	EXP 	text_4: text = u'S'
+39.5883 	EXP 	Sound  started
+40.1498 	EXP 	text_4: text = 'T'
+40.1498 	EXP 	text_4: text = u'T'
+41.1999 	EXP 	text_4: text = 'U'
+41.1999 	EXP 	text_4: text = u'U'
+42.1246 	EXP 	text_4: text = 'T'
+42.1246 	EXP 	text_4: text = u'T'
+43.1937 	EXP 	text_4: text = 'U'
+43.1937 	EXP 	text_4: text = u'U'
+44.2278 	EXP 	text_4: text = 'V'
+44.2278 	EXP 	text_4: text = u'V'
+45.1604 	EXP 	text_4: text = 'W'
+45.1604 	EXP 	text_4: text = u'W'
+46.0918 	EXP 	text_4: text = 'X'
+46.0918 	EXP 	text_4: text = u'X'
+47.1367 	EXP 	text_4: text = 'Y'
+47.1367 	EXP 	text_4: text = u'Y'
+48.2212 	EXP 	text_4: text = 'X'
+48.2212 	EXP 	text_4: text = u'X'
+49.0877 	EXP 	text_4: text = 'Y'
+49.0877 	EXP 	text_4: text = u'Y'
+50.1567 	EXP 	text_4: text = 'Z'
+50.1567 	EXP 	text_4: text = u'Z'
+50.1608 	EXP 	Sound  started
+51.1057 	EXP 	text_4: text = 'A'
+51.1057 	EXP 	text_4: text = u'A'
+51.3860 	EXP 	Sound  started
+52.1065 	EXP 	text_4: text = 'B'
+52.1065 	EXP 	text_4: text = u'B'
+52.6250 	EXP 	Sound  started
+53.1744 	EXP 	text_4: text = 'C'
+53.1744 	EXP 	text_4: text = u'C'
+53.8315 	EXP 	Sound  started
+54.1085 	EXP 	text_4: text = 'D'
+54.1085 	EXP 	text_4: text = u'D'
+55.1311 	EXP 	text_4: text = 'E'
+55.1311 	EXP 	text_4: text = u'E'
+55.1334 	EXP 	Sound  started
+56.0801 	EXP 	text_4: text = 'F'
+56.0801 	EXP 	text_4: text = u'F'
+56.3355 	EXP 	Sound  started
+57.0636 	EXP 	text_4: text = 'G'
+57.0636 	EXP 	text_4: text = u'G'
+57.5384 	EXP 	Sound  started
+58.0632 	EXP 	text_4: text = 'H'
+58.0632 	EXP 	text_4: text = u'H'
+58.7412 	EXP 	Sound  started
+59.0636 	EXP 	text_4: text = 'I'
+59.0636 	EXP 	text_4: text = u'I'
+59.9440 	EXP 	Sound  started
+60.0635 	EXP 	text_4: text = 'J'
+60.0635 	EXP 	text_4: text = u'J'
+61.0636 	EXP 	text_4: text = 'K'
+61.0636 	EXP 	text_4: text = u'K'
+62.0643 	EXP 	text_4: text = 'L'
+62.0643 	EXP 	text_4: text = u'L'
+63.0801 	EXP 	text_4: text = 'M'
+63.0801 	EXP 	text_4: text = u'M'
+64.0631 	EXP 	text_4: text = 'N'
+64.0631 	EXP 	text_4: text = u'N'
+64.7548 	DATA 	Keypress: escape

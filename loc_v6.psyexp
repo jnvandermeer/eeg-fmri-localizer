@@ -59,14 +59,14 @@
         <Param name="store" val="last key" valType="str" updates="constant"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="key">
-      <TextComponent name="text_3">
+    <Routine name="key_3">
+      <TextComponent name="instructions">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
         <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="text_3" valType="code" updates="None"/>
+        <Param name="name" val="instructions" valType="code" updates="None"/>
         <Param name="wrapWidth" val="" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Any text&#10;&#10;including line breaks" valType="str" updates="constant"/>
+        <Param name="text" val="Try to keep focusing on the crosshair!" valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -80,10 +80,10 @@
         <Param name="font" val="Arial" valType="str" updates="constant"/>
         <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_3">
+      <KeyboardComponent name="key_resp_4">
         <Param name="correctAns" val="" valType="str" updates="constant"/>
         <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="key_resp_3" valType="code" updates="None"/>
+        <Param name="name" val="key_resp_4" valType="code" updates="None"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
@@ -143,18 +143,15 @@
         <Param name="store" val="last key" valType="str" updates="constant"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="audio_55_L">
-      <SoundComponent name="sound_3">
-        <Param name="sound" val="audio_55Hz_L.wav" valType="str" updates="constant"/>
-        <Param name="volume" val="1" valType="code" updates="constant"/>
-        <Param name="name" val="sound_3" valType="code" updates="None"/>
-        <Param name="stopVal" val="1.2" valType="code" updates="constant"/>
-        <Param name="durationEstim" val="1.2" valType="code" updates="None"/>
-        <Param name="startEstim" val="" valType="code" updates="None"/>
-        <Param name="startType" val="time (s)" valType="str" updates="None"/>
-        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
-        <Param name="startVal" val="0.0" valType="code" updates="None"/>
-      </SoundComponent>
+    <Routine name="do_audio">
+      <CodeComponent name="audio_stim">
+        <Param name="Begin Experiment" val="import threading&#10;import time&#10;&#10;&#10;# define my dict.&#10;sounds={'left':{'40':sound.Sound('stim/audio_40Hz_L.wav', secs=-1),'55':sound.Sound('stim/audio_55Hz_L.wav', secs=-1)},'right':{'40':sound.Sound('stim/audio_40Hz_R.wav', secs=-1),'55':sound.Sound('stim/audio_55Hz_R.wav', secs=-1)}}&#10;&#10;# initiate my volumes...&#10;sounds['left']['40'].setVolume(1)&#10;sounds['right']['40'].setVolume(1)&#10;sounds['left']['55'].setVolume(1)&#10;sounds['right']['55'].setVolume(1)&#10;&#10;&#10;class play_audio_stim(threading.Thread):&#10;    def __init__(self,sounds,side,freq):&#10;        threading.Thread.__init__(self)&#10;        self.side=side&#10;        self.freq=freq&#10;        self.sounds=sounds&#10;        self.isstarted=0&#10;    def run(self):&#10;        print('started audio thread...')&#10;        self.isstarted=1&#10;        start_time=time.time()&#10;        sounds=self.sounds&#10;        freq=self.freq&#10;        side=self.side&#10;&#10;        # current_time = time.time() - start_time&#10;        # print current_time&#10;        my_sound = sounds[side][freq]&#10;        my_sound.play()&#10;        # ... aaand... we neatly wait untill the sound has been finished!&#10;        time.sleep(my_sound.getDuration())&#10;        current_time = time.time() - start_time&#10;        print '---'&#10;        print current_time&#10;&#10;        &#10;    def isStarted(self):&#10;        return self.isstarted" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="audio_stim" valType="code" updates="None"/>
+        <Param name="Begin Routine" val="# a = play_audio_stim(sounds,'right',55)&#10;# a.start()&#10;" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
     </Routine>
     <Routine name="play_audio">
       <SoundComponent name="sound_1">
@@ -169,15 +166,18 @@
         <Param name="startVal" val="0.0" valType="code" updates="None"/>
       </SoundComponent>
     </Routine>
-    <Routine name="do_audio">
-      <CodeComponent name="audio_stim">
-        <Param name="Begin Experiment" val="import threading&#10;import time&#10;&#10;&#10;# define my dict.&#10;sounds={'left':{'40':sound.Sound('stim/audio_40Hz_L.wav', secs=-1),'55':sound.Sound('stim/audio_55Hz_L.wav', secs=-1)},'right':{'40':sound.Sound('stim/audio_40Hz_R.wav', secs=-1),'55':sound.Sound('stim/audio_55Hz_R.wav', secs=-1)}}&#10;&#10;# initiate my volumes...&#10;sounds['left']['40'].setVolume(1)&#10;sounds['right']['40'].setVolume(1)&#10;sounds['left']['55'].setVolume(1)&#10;sounds['right']['55'].setVolume(1)&#10;&#10;&#10;class play_audio_stim(threading.Thread):&#10;    def __init__(self,sounds,side,freq):&#10;        threading.Thread.__init__(self)&#10;        self.side=side&#10;        self.freq=freq&#10;        self.sounds=sounds&#10;        self.isstarted=0&#10;    def run(self):&#10;        print('started audio thread...')&#10;        self.isstarted=1&#10;        start_time=time.time()&#10;        sounds=self.sounds&#10;        freq=self.freq&#10;        side=self.side&#10;&#10;        # current_time = time.time() - start_time&#10;        # print current_time&#10;        my_sound = sounds[side][freq]&#10;        my_sound.play()&#10;        # ... aaand... we neatly wait untill the sound has been finished!&#10;        time.sleep(my_sound.getDuration())&#10;        current_time = time.time() - start_time&#10;        print '---'&#10;        print current_time&#10;&#10;        &#10;    def isStarted(self):&#10;        return self.isstarted" valType="extendedCode" updates="constant"/>
-        <Param name="name" val="audio_stim" valType="code" updates="None"/>
-        <Param name="Begin Routine" val="# a = play_audio_stim(sounds,'right',55)&#10;# a.start()&#10;" valType="extendedCode" updates="constant"/>
-        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
-        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
-        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
-      </CodeComponent>
+    <Routine name="audio_55_L">
+      <SoundComponent name="sound_3">
+        <Param name="sound" val="audio_55Hz_L.wav" valType="str" updates="constant"/>
+        <Param name="volume" val="1" valType="code" updates="constant"/>
+        <Param name="name" val="sound_3" valType="code" updates="None"/>
+        <Param name="stopVal" val="1.2" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="1.2" valType="code" updates="None"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+      </SoundComponent>
     </Routine>
     <Routine name="instructions_2"/>
     <Routine name="audio_40_R">
@@ -254,14 +254,14 @@
         <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
       </CodeComponent>
     </Routine>
-    <Routine name="key_3">
-      <TextComponent name="instructions">
+    <Routine name="key">
+      <TextComponent name="text_3">
         <Param name="opacity" val="1" valType="code" updates="constant"/>
         <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
-        <Param name="name" val="instructions" valType="code" updates="None"/>
+        <Param name="name" val="text_3" valType="code" updates="None"/>
         <Param name="wrapWidth" val="" valType="code" updates="constant"/>
         <Param name="color" val="white" valType="str" updates="constant"/>
-        <Param name="text" val="Try to keep focusing on the crosshair!" valType="str" updates="constant"/>
+        <Param name="text" val="Any text&#10;&#10;including line breaks" valType="str" updates="constant"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
@@ -275,10 +275,10 @@
         <Param name="font" val="Arial" valType="str" updates="constant"/>
         <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_4">
+      <KeyboardComponent name="key_resp_3">
         <Param name="correctAns" val="" valType="str" updates="constant"/>
         <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
-        <Param name="name" val="key_resp_4" valType="code" updates="None"/>
+        <Param name="name" val="key_resp_3" valType="code" updates="None"/>
         <Param name="stopVal" val="" valType="code" updates="constant"/>
         <Param name="durationEstim" val="" valType="code" updates="None"/>
         <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
@@ -303,6 +303,59 @@
       </CodeComponent>
     </Routine>
     <Routine name="vis_8Hz_L"/>
+    <Routine name="do_triggers">
+      <CodeComponent name="code_triggers">
+        <Param name="Begin Experiment" val="# -*- coding: utf-8 -*-&#10;&quot;&quot;&quot;&#10;Created on Wed May 27 12:57:03 2015&#10;&#10;@author: Johan&#10;&quot;&quot;&quot;&#10;# this is all I need to make my experiment output some triggers.&#10;# USAGE (very simple):&#10;&#10;# check the sender objects - use the one appropriate!&#10;# then - instantiate an ev_thread - give as agurment an instantiation of the appropriate sender object.&#10;&#10;#   evt = evt_thread(egi_sender())&#10;&#10;# then  start it:&#10;&#10;#   evt.start()&#10;&#10;# then - send events like so (i.e., strings!)&#10;# brain products DOES wish only for INTs, though. That sort of sucks, given that EGI accepts strings. Naja. Implement it anyway.&#10;&#10;#   evt.send(10)&#10;&#10;# finally, at the end of the experiment  - stop it&#10;&#10;#   evt.stop()&#10;&#10;&#10;# a class that sends events regardless of attached device. So that during my experiment, I don't&#10;# have to worry aobut that - the abstraction lies in here.&#10;&#10;# written on-the-fly. So abstractions are right now something to improve upon.&#10;# like: where do I do my device-specific stuff, do I make own functions for them, and where?&#10;# right now I opted to have it distributed into the class itself, while in prinicple,&#10;# it's nicer to maybe even make sub-classes per device for easy implementation later on.&#10;# hmm - maybe I shoudl do this anyway. Damn.&#10;&#10;# let's see how much the quick-n-dirty class implementation method of work would be&#10;# improved by using python and NOT matlab - the king of quick n dirty.&#10;&#10;&#10;# stuff we beed to send stuff:&#10;import egi.simple as egi&#10;# import parallel&#10;import threading&#10;&#10;import time&#10;&#10;# fill in later to allow me to send BP triggers via parallel.&#10;# most easy now - i just need to take care to instantiate the right object.&#10;# and THEN - I just use init, send and finish!!&#10;# maybe I could even make a super-class of this.&#10;# but not.. now..&#10;class brain_products_sender():&#10;    def __init__(self):&#10;        pass&#10;    &#10;    def init(self):&#10;        pass&#10;    &#10;    def send(self,ev):&#10;        pass&#10;    &#10;    def finish(self):&#10;        pass&#10;    &#10;&#10;# this looks a little bit cleaner, already - i can focus just on one class if i wish&#10;# to implement another recorder.&#10;class egi_sender():&#10;    def __init__(self):&#10;        pass&#10;        &#10;    def init(self):&#10;        ns = egi.Netstation()&#10;        ns.connect('10.0.0.42', 55513) # sample address and port -- change according to your network settings            &#10;        ns.BeginSession()     &#10;        ns.sync()     &#10;        ns.StartRecording()&#10;        # save it to obj namespace for later use.&#10;        self.ns=ns&#10;        &#10;    def send(self,ev):&#10;        ns = self.ns&#10;        timestamp = egi.ms_localtime()&#10;        ns.send_event( ev, label=ev, timestamp=timestamp, table = {'label' : ev, 'timestamp' : timestamp} ) &#10;        &#10;    def finish(self):&#10;        ns = self.ns&#10;        ns.StopRecording()&#10;        ns.EndSession()&#10;        ns.disconnect()&#10;&#10;&#10;# the MAIN class: ev_sender!&#10;class ev_thread(threading.Thread):&#10;    &#10;    # init asks you for what kind of device you have attached&#10;    # it also inits for you - if needed&#10;    def __init__(self,sender_obj):&#10;        # overload..&#10;        threading.Thread.__init(self)&#10;        # output_device can be either:&#10;        # 'no_device'&#10;        # 'egi'&#10;        # 'brain_products'&#10;        # !!! instantiate THIS object with a sender object!&#10;        self.sender = sender_obj&#10;        self.ev_list=[]&#10;        # for clean exit&#10;        self.stop_sending = 0&#10;        # do the init stuff separately (necessary) - makes you work for it&#10;        self.sender.init()&#10;&#10;        &#10;    def run(self):&#10;&#10;        # apply the LIFO rule for sending events.&#10;        while len(self.ev_list)&gt;0:&#10;&#10;            # pop it..&#10;            ev=self.ev_list.pop(0)&#10;&#10;            # send it!&#10;            self.sender.send(ev)&#10;            &#10;            # arrange for a clean exit&#10;            if self.stop_thread == 1:&#10;                # disconnect, etc etc:&#10;                self.sender.stop()&#10;                # then - exit this loop.&#10;                break&#10;            &#10;            # make sure the processor doens't take it all up!&#10;            # allow for 1 msec time inaccuracy, too.&#10;            time.sleep(0.001)&#10;&#10;    def send(self,ev):&#10;        # just append it to the list - so it'll be taken off in the main while loop.&#10;        self.ev.append(ev)&#10;        &#10;        &#10;    def stop(self):&#10;        self.stop_thread = 1&#10;        " valType="extendedCode" updates="constant"/>
+        <Param name="name" val="code_triggers" valType="code" updates="None"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+      <TextComponent name="select_eeg_system">
+        <Param name="opacity" val="1" valType="code" updates="constant"/>
+        <Param name="colorSpace" val="rgb" valType="str" updates="constant"/>
+        <Param name="name" val="select_eeg_system" valType="code" updates="None"/>
+        <Param name="wrapWidth" val="" valType="code" updates="constant"/>
+        <Param name="color" val="white" valType="str" updates="constant"/>
+        <Param name="text" val="What is your EEG system?&#10;&#10;1) Nothing (don't send triggers)&#10;&#10;2) EGI&#10;&#10;3) Brain Products" valType="str" updates="constant"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="pos" val="[0, 0]" valType="code" updates="constant"/>
+        <Param name="flip" val="" valType="str" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="units" val="from exp settings" valType="str" updates="None"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="ori" val="0" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="font" val="Arial" valType="str" updates="constant"/>
+        <Param name="letterHeight" val="0.1" valType="code" updates="constant"/>
+      </TextComponent>
+      <KeyboardComponent name="eeg_resp">
+        <Param name="correctAns" val="" valType="str" updates="constant"/>
+        <Param name="storeCorrect" val="False" valType="bool" updates="constant"/>
+        <Param name="name" val="eeg_resp" valType="code" updates="None"/>
+        <Param name="stopVal" val="" valType="code" updates="constant"/>
+        <Param name="durationEstim" val="" valType="code" updates="None"/>
+        <Param name="forceEndRoutine" val="True" valType="bool" updates="constant"/>
+        <Param name="startEstim" val="" valType="code" updates="None"/>
+        <Param name="discard previous" val="True" valType="bool" updates="constant"/>
+        <Param name="startType" val="time (s)" valType="str" updates="None"/>
+        <Param name="allowedKeys" val="'1','2','3','space','esc'" valType="code" updates="constant"/>
+        <Param name="stopType" val="duration (s)" valType="str" updates="None"/>
+        <Param name="startVal" val="0.0" valType="code" updates="None"/>
+        <Param name="store" val="last key" valType="str" updates="constant"/>
+      </KeyboardComponent>
+      <CodeComponent name="get_eeg_system">
+        <Param name="Begin Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="name" val="get_eeg_system" valType="code" updates="None"/>
+        <Param name="Begin Routine" val="" valType="extendedCode" updates="constant"/>
+        <Param name="End Routine" val="&#10;# VERY exhaustive - can i do this better?&#10;my_key_pressed = eeg_resp.keys&#10;eeg_systems = {'1':'none', '2':'egi', '3':'bp'} # of course it is a comma - like everything in pyhton&#10;eeg_system_used = eeg_systems[my_key_pressed]&#10;&#10;print eeg_system_used" valType="extendedCode" updates="constant"/>
+        <Param name="End Experiment" val="" valType="extendedCode" updates="constant"/>
+        <Param name="Each Frame" val="" valType="extendedCode" updates="constant"/>
+      </CodeComponent>
+    </Routine>
     <Routine name="do_video">
       <CodeComponent name="vis_stim">
         <Param name="Begin Experiment" val="import time&#10;import threading&#10;import copy&#10;&#10;&#10;&#10;# initiate my visual stimuli:&#10;vis_times={'8':[0.001,0.111, 0.253,0.373,0.475, 0.600],'13':[0.001,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}&#10;&#10;&#10;class play_vis_stim(threading.Thread):&#10;    def __init__(self,vis_times,side,freq):&#10;        threading.Thread.__init__(self)&#10;        self.win=win&#10;        # is this it?&#10;        self.hit_times=copy.deepcopy(vis_times[freq])&#10;        self.side=side&#10;        self.flash=0&#10;        self.isstarted=0&#10;&#10;&#10;    def run(self):&#10;&#10;        print('started visual thread...')&#10;        self.isstarted=1&#10;        # get the list&#10;        hit_times = self.hit_times&#10;        # this is to make things run/work&#10;        max_time = hit_times[-1]&#10;        hit_times[-1] = -1&#10;&#10;        start_time=time.time()&#10;        target_time = hit_times.pop(0)&#10;&#10;        while True:&#10;            current_time = time.time() - start_time&#10;            if current_time &gt;target_time and target_time &gt; 0:&#10;    &#10;                #print current_time&#10;                #print target_time&#10;                #print 'flashed'&#10;&#10;                self.flash=1;&#10;&#10;                # get us a NEW target time !!&#10;                target_time = hit_times.pop(0)&#10;&#10;            if current_time&gt;max_time:&#10;                #print 'broke while loop at time = %f ' % current_time&#10;                break&#10;    &#10;            time.sleep(0.0005)&#10;&#10;    def resetFlash(self):&#10;        self.flash=0&#10;&#10;    def queryFlash(self):&#10;        return self.flash&#10;&#10;    def getSide(self):&#10;        return self.side&#10;&#10;    def isStarted(self):&#10;        return self.isstarted" valType="extendedCode" updates="constant"/>
@@ -355,6 +408,7 @@
     <Routine name="do_video"/>
     <Routine name="do_audio"/>
     <Routine name="do_letters"/>
+    <Routine name="do_triggers"/>
     <Routine name="instr"/>
     <Routine name="main_routine"/>
     <Routine name="end"/>
