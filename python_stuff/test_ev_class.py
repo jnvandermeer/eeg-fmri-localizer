@@ -4,6 +4,9 @@ Created on Thu May 28 18:49:54 2015
 
 @author: Johan
 """
+
+# just some sandbox stuff - to figure out if things work.
+# will be imported into psychopy as a code module later on.
 import threading
 import time
 

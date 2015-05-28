@@ -1,0 +1,4 @@
+eeg_resp.keys,eeg_resp.rt,key_begin.keys,key_begin.rt,end_key.keys,end_key.rt,date,frameRate,expName,session,participant,
+1,1.0811068952,,,,,2015_mei_28_2250,None,loc_v1,001,asd,
+,,space,0.433604491751,,,2015_mei_28_2250,None,loc_v1,001,asd,
+,,,,space,3.16773916457,2015_mei_28_2250,None,loc_v1,001,asd,

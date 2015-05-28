@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 21:34
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 23:52
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -63,6 +63,13 @@ import threading
 import copy
 
 
+# control whether we will do single or double checkerboard flips:
+global vis_do_double_flip
+vis_do_double_flip = False
+
+# control whether we will do the other side too, with freq of 0.4 Hz - to avoid ghosting artifact in yoru eye.
+# global vis_flip_other_side
+vis_flip_other_side = True
 
 # initiate my visual stimuli:
 vis_times={'8':[0.001,0.111, 0.253,0.373,0.475, 0.600],'13':[0.001,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}
@@ -97,10 +104,15 @@ class play_vis_stim(threading.Thread):
         self.isstarted=0
         self.freq = freq
 
+        print self.side
+        print self.freq
+
 
     def run(self):
 
         print('started visual thread...')
+        side=self.side
+        freq=self.freq
         self.isstarted=1
         # get the list
         hit_times = self.hit_times
@@ -110,7 +122,6 @@ class play_vis_stim(threading.Thread):
 
         start_time=time.time()
         target_time = hit_times.pop(0)
-
         evt.send(visual_evt_codes_beginvisthread[side][freq])
 
         while True:
@@ -175,6 +186,7 @@ class play_audio_stim(threading.Thread):
         self.freq=freq
         self.sounds=sounds
         self.isstarted=0
+
     def run(self):
         print('started audio thread...')
         self.isstarted=1
@@ -259,7 +271,7 @@ class letter_stream(threading.Thread):
         switch_probability=self.switch_probability
 
 
-        cal_time = time.time()
+        cal_time = time.time()+switch_frequency # prevent from jumping the first later - irritating!
         # keep on doing this - until the end of the experiment, when I 'quit' the CORE:
     
         # beauty fix - start 1 sec after start of the experiment
@@ -386,9 +398,9 @@ class none_sender():
         print('none_sender: INITIALIZED')
     
     def send(self,ev):
-        print('none_sender: sending: ' + str(ev))
+        # print('none_sender: sending: ' + str(ev))
         # for me a print; normally:
-        # pass
+        pass
     
     def finish(self):
         print('none_sender: DISCONNECT/STOPPED')
@@ -512,7 +524,7 @@ select_eeg_system = visual.TextStim(win=win, ori=0, name='select_eeg_system',
 # Initialize components for Routine "instr"
 instrClock = core.Clock()
 instr_text = visual.TextStim(win=win, ori=0, name='instr_text',
-    text='Try to keep focusing on the crosshair!',    font='Arial',
+    text='Mind the numbers in the middle\n\nIf the sequence changes:\n\npress a key!',    font='Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
     color='white', colorSpace='rgb', opacity=1,
     depth=0.0)
@@ -529,7 +541,6 @@ checkerboard_hidden=True
 # generated with a matlab script, so we can play around with other timing options
 # stuff that happens left is always equally long as stuff that happens right - good for fMRI
 # difference between 2 frequencies I cannot make exactly the same - so anything that compares frequencies should have NORMALIZED power
-
 
 only_audio = [[10.,20.,'audio',['left','40']],[112.5,130.,'audio',['left','40']],[242.5,260.,'audio',['left','40']],[50.,60.,'audio',['left','55']],[195.,205.,'audio',['left','55']],[312.5,330.,'audio',['left','55']],[30.,40.,'audio',['right','40']],[147.5,165.,'audio',['right','40']],[277.5,295.,'audio',['right','40']],[77.5,95.,'audio',['right','55']],[175.,185.,'audio',['right','55']],[215.,225.,'audio',['right','55']]]
 only_video = [[17.5,35.,'video',['left','8']],[135.,145.,'video',['left','8']],[280.,290.,'video',['left','8']],[87.5,105.,'video',['left','13']],[217.5,235.,'video',['left','13']],[320.,330.,'video',['left','13']],[52.5,70.,'video',['right','8']],[155.,165.,'video',['right','8']],[300.,310.,'video',['right','8']],[115.,125.,'video',['right','13']],[182.5,200.,'video',['right','13']],[252.5,270.,'video',['right','13']]]
@@ -565,7 +576,7 @@ fixation = visual.PatchStim(win, color=-0.25, colorSpace='rgb', tex=None,
 vis_contents = [right_cb,left_cb,fixation,text_stim]
 
 
-def doFlash(win,vis_contents,side,freq,evt):
+def doFlash(win,vis_contents,side,freq,evt,lstream_ev_container):
 
     # extract again the visual contents:
     right_cb = vis_contents[0]
@@ -581,22 +592,29 @@ def doFlash(win,vis_contents,side,freq,evt):
     right_cb.draw()
     fixation.draw()
     text_stim.draw()
+
+    # when for text, only a flip will be done with the checkerboard - send it here!
+    for item in lstream_ev_container:
+        evt.send(item)
     win.flip()
 
-    time.sleep(0.005)
+    # maybe skip this?
+    if vis_do_double_flip:
+        time.sleep(0.005)
 
-    if side=='left':
-        left_cb.contrast = -1.*left_cb.contrast
-    elif side=='right':
-        right_cb.contrast = -1.*right_cb.contrast
-    left_cb.draw()
-    right_cb.draw()
-    fixation.draw()
-    text_stim.draw()
-    win.flip()
+        if side=='left':
+            left_cb.contrast = -1.*left_cb.contrast
+        elif side=='right':
+            right_cb.contrast = -1.*right_cb.contrast
+        left_cb.draw()
+        right_cb.draw()
+        fixation.draw()
+        text_stim.draw()
+        win.flip()
+
 
 # seems to be a good thing to name it like this.
-def hideCheckerboard(win,vis_contents):
+def hideCheckerboard(win,vis_contents,lstream_ev_container):
 
     right_cb = vis_contents[0]
     left_cb=vis_contents[1]
@@ -604,9 +622,15 @@ def hideCheckerboard(win,vis_contents):
     text_stim=vis_contents[3]
     fixation.draw()
     text_stim.draw()
+
+    # ugly code to make letters work nice with other flip() stuff that I do..
+    for ev in lstream_ev_container:
+        evt.send(ev)
+    
     win.flip()
     new_vis_contents = [fixation,text_stim]
     return new_vis_contents
+
 
 def showCheckerboard(win,vis_contents):
 
@@ -622,7 +646,8 @@ def showCheckerboard(win,vis_contents):
     return new_vis_contents
     
 
-def textFlip(win,vis_contents,video_is_running):
+
+def textFlip(win,vis_contents,video_is_running,lstream_ev_container):
     # well - this could use some improvements - in conceptualization.
     # the checkerboard_hidden could be done better.
     # that's what you get when you are programming quick -n- dirty.
@@ -637,6 +662,10 @@ def textFlip(win,vis_contents,video_is_running):
         # print(len(vis_contents))
         for item in vis_contents:
             item.draw()
+
+        # ugly code to make letters work nice with other flip() stuff that I do.
+        for ev in lstream_ev_container:
+            evt.send(ev)
         win.flip()
 
 
@@ -1016,9 +1045,18 @@ video_was_running = 0
 audio_is_running = 0
 audio_was_running = 0
 
+# this is to make lstream events only be sent RIGHT before a window flip.
+# I flip windows ONLY during checkerboard reversals, hide/show checkerboard - when VIS is ON
+# when VIS is OFF, I flip windows separately.
+# otherwise, I ask to flip the window TWICE during visual checkerboard stimulus - also with each letter - something I'd like to avoid, if possible.
+#
+#
+# I need to read up on screen refresh rates and pyglet and pygame draw() and flip() methods.
+#
+lstream_ev_container=[]
 
 # draw (only) the fixation cross, now, using the function:
-new_vis_contents=hideCheckerboard(win,vis_contents)
+new_vis_contents=hideCheckerboard(win,vis_contents,lstream_ev_container)
 
 # control how/when audio and visual elements are created:
 v_next = 0
@@ -1034,9 +1072,37 @@ letter_switch_probability = 0.15 # 15 % change of switching the 'wrong' way = su
 lstream = letter_stream(letters_for_letter_stream,letter_switch_interval,letter_switch_probability,evt)
 lstream.start()
 
+# gather lstreams in here, and empty them upon a window flip
+
+time_of_other_half_reset = 0.
 
 while True:
     current_time=time.time() - start_time
+
+    # prevent you from seeing the checkerboard like hell. Frequency = 0.4 Hz; a little less than once/2 sec.
+    if vis_flip_other_side and video_is_running:
+        time_since_last_other_half_reset = current_time - time_of_other_half_reset
+
+        if time_since_last_other_half_reset > 2.5:
+
+            # duh.
+            time_of_other_half_reset = current_time
+
+            # if you have video_is_running, you definitely have a v_current that's an object.
+            side = v_current.getSide()
+            # print side
+            # print(time_since_last_other_half_reset)
+            # print(time_of_other_half_reset)
+
+            if side == 'left':
+                right_cb.contrast = -1.*right_cb.contrast
+            elif side == 'right':
+                left_cb.contrast = -1.*left_cb.contrast
+
+        else:
+            pass
+
+    # check out what we should do right now.
     tasks=[]
     for item in all_timings:
         if current_time > item[0] and current_time < item[1]:
@@ -1113,7 +1179,7 @@ while True:
     # need pygame manual for that...
     if video_was_running and not video_is_running:
         print(' -- DISABLE CHECKERBOARD')
-        new_vis_contents = hideCheckerboard(win,vis_contents)
+        new_vis_contents = hideCheckerboard(win,vis_contents,lstream_ev_container)
 
     
     # reset the video and/or audio stimuli:
@@ -1132,7 +1198,7 @@ while True:
             freq = v_current.getFreq()
             # send a code indicating a flash to my evt handler object thread - fire & forget..?
             evt.send(visual_evt_codes[side][freq])
-            doFlash(win,vis_contents,side,freq,evt)
+            doFlash(win,vis_contents,side,freq,evt,lstream_ev_container)
 
             # reset the flash value - and continue:
             v_current.resetFlash()
@@ -1184,10 +1250,11 @@ while True:
         # send my letter event!!
         # print('trying to send: ' + str(txt_evt_codes[ltype]))
         evt.send(txt_evt_codes[ltype])
+        lstream_ev_container.append(txt_evt_codes[ltype]+10)
 
         text_stim.text=letter
         text_stim.text=text_stim.text # according to suggestion??
-        textFlip(win,new_vis_contents,video_is_running)
+        textFlip(win,new_vis_contents,video_is_running,lstream_ev_container)
         
 
     # ADD-ON which only works in psychopy?
