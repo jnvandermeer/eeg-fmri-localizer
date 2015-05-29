@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 28, 2015, at 23:52
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 29, 2015, at 09:19
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -70,6 +70,7 @@ vis_do_double_flip = False
 # control whether we will do the other side too, with freq of 0.4 Hz - to avoid ghosting artifact in yoru eye.
 # global vis_flip_other_side
 vis_flip_other_side = True
+vis_flip_other_side_interval = 2.5 # this many seconds pass untill the otherside's contrast is flipped.
 
 # initiate my visual stimuli:
 vis_times={'8':[0.001,0.111, 0.253,0.373,0.475, 0.600],'13':[0.001,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}
@@ -1083,7 +1084,7 @@ while True:
     if vis_flip_other_side and video_is_running:
         time_since_last_other_half_reset = current_time - time_of_other_half_reset
 
-        if time_since_last_other_half_reset > 2.5:
+        if time_since_last_other_half_reset > vis_flip_other_side_interval:
 
             # duh.
             time_of_other_half_reset = current_time
