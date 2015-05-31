@@ -1,0 +1,4 @@
+get_size_key.keys,get_size_key.rt,eeg_resp.keys,eeg_resp.rt,key_begin.keys,key_begin.rt,date,frameRate,expName,session,participant,
+1,1.28826996409,,,,,2015_mei_29_1420,58.4647232739,loc_v1,001,fg,
+,,2,0.162419398632,,,2015_mei_29_1420,58.4647232739,loc_v1,001,fg,
+,,,,space,0.373967495407,2015_mei_29_1420,58.4647232739,loc_v1,001,fg,

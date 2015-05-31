@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 31, 2015, at 10:25
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 29, 2015, at 14:34
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -33,7 +33,7 @@ filename = _thisDir + os.sep + 'data/%s_%s_%s' %(expInfo['participant'], expName
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=None,
+    originPath='C:\\Users\\Rachel Koops\\Desktop\\Vis_mot_inh_taak\\EEG\\eeg-fmri-localizer\\loc_v8.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 #save a log file for detail verbose info
@@ -45,7 +45,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(1600, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -59,18 +59,9 @@ else:
 # Initialize components for Routine "ask_for_size"
 ask_for_sizeClock = core.Clock()
 text_ask_for_version = visual.TextStim(win=win, ori=0, name='text_ask_for_version',
-    text='(1) Normal (100%)\n(2) Smaller (75%)\n(3) Even smaller (50%)\n(4) Smallest (25%)\n(5) Bigger (125%)\n(6) Too big (150%)',    font='Arial',
+    text="What size of Stimuli?\n\n1) Normal Size (100%)\n2) Smaller Size (75%)\n3) Even Smaller (50%)\n4) Smallest Size (25%)\n5) Doesn't fit on screen (125%)\n6) Even worse fit (150%)",    font='Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
     color='white', colorSpace='rgb', opacity=1,
-    depth=0.0)
-
-
-# Initialize components for Routine "ask_for_flip"
-ask_for_flipClock = core.Clock()
-text_ask_for_flip = visual.TextStim(win=win, ori=0, name='text_ask_for_flip',
-    text=u'1) No Flip?\n2) Flip x-axis?\n3) Flip y-axis?\n4) FLip both?',    font=u'Arial',
-    pos=[0, 0], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
     depth=0.0)
 
 
@@ -285,7 +276,8 @@ Created on Wed May 27 12:57:03 2015
 # improved by using python and NOT matlab - the king of quick n dirty.
 
 
-
+# stuff we beed to send stuff:
+import egi.simple as egi
 # import parallel
 import threading
 
@@ -337,8 +329,6 @@ class egi_sender():
         pass
         
     def init(self):
-        # stuff we beed to send stuff:
-        import egi.simple as egi
         ns = egi.Netstation()
         ns.connect('10.0.0.42', 55513) # sample address and port -- change according to your network settings            
         ns.BeginSession()
@@ -443,11 +433,10 @@ select_eeg_system = visual.TextStim(win=win, ori=0, name='select_eeg_system',
 instrClock = core.Clock()
 
 instr_text = visual.TextStim(win=win, ori=0, name='instr_text',
-    text=u'Mind the numbers in the middle\n\nIf the sequence changes:\n\npress a key!',    font=u'Arial',
+    text='Mind the numbers in the middle\n\nIf the sequence changes:\n\npress a key!',    font='Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-1.0)
-
 
 # Initialize components for Routine "main_routine"
 main_routineClock = core.Clock()
@@ -508,7 +497,7 @@ while continueRoutine:
         get_size_key.clock.reset()  # now t=0
         event.clearEvents(eventType='keyboard')
     if get_size_key.status == STARTED:
-        theseKeys = event.getKeys(keyList=['1', '2', '3', '4', '5', '6', 'escape'])
+        theseKeys = event.getKeys(keyList=['1', '2', '3', '4', '5', '6', 'space', 'escape'])
         
         # check for quit:
         if "escape" in theseKeys:
@@ -556,98 +545,6 @@ stimuli_sizes = {'1':1.00, '2':0.75,'3':0.50,'4':0.25,'5':1.25,'6':1.50} # of co
 SIZE_MUL_FACTOR = stimuli_sizes[my_key_pressed]
 
 # the Routine "ask_for_size" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
-#------Prepare to start Routine "ask_for_flip"-------
-t = 0
-ask_for_flipClock.reset()  # clock 
-frameN = -1
-# update component parameters for each repeat
-get_ask_for_flip = event.BuilderKeyResponse()  # create an object of type KeyResponse
-get_ask_for_flip.status = NOT_STARTED
-
-# keep track of which components have finished
-ask_for_flipComponents = []
-ask_for_flipComponents.append(text_ask_for_flip)
-ask_for_flipComponents.append(get_ask_for_flip)
-for thisComponent in ask_for_flipComponents:
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-#-------Start Routine "ask_for_flip"-------
-continueRoutine = True
-while continueRoutine:
-    # get current time
-    t = ask_for_flipClock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *text_ask_for_flip* updates
-    if t >= 0.0 and text_ask_for_flip.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        text_ask_for_flip.tStart = t  # underestimates by a little under one frame
-        text_ask_for_flip.frameNStart = frameN  # exact frame index
-        text_ask_for_flip.setAutoDraw(True)
-    
-    # *get_ask_for_flip* updates
-    if t >= 0.0 and get_ask_for_flip.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        get_ask_for_flip.tStart = t  # underestimates by a little under one frame
-        get_ask_for_flip.frameNStart = frameN  # exact frame index
-        get_ask_for_flip.status = STARTED
-        # keyboard checking is just starting
-        get_ask_for_flip.clock.reset()  # now t=0
-        event.clearEvents(eventType='keyboard')
-    if get_ask_for_flip.status == STARTED:
-        theseKeys = event.getKeys(keyList=['1', '2', '3', '4', 'esc'])
-        
-        # check for quit:
-        if "escape" in theseKeys:
-            endExpNow = True
-        if len(theseKeys) > 0:  # at least one key was pressed
-            get_ask_for_flip.keys = theseKeys[-1]  # just the last key pressed
-            get_ask_for_flip.rt = get_ask_for_flip.clock.getTime()
-            # a response ends the routine
-            continueRoutine = False
-    
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in ask_for_flipComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # check for quit (the Esc key)
-    if endExpNow or event.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-#-------Ending Routine "ask_for_flip"-------
-for thisComponent in ask_for_flipComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-# check responses
-if get_ask_for_flip.keys in ['', [], None]:  # No response was made
-   get_ask_for_flip.keys=None
-# store data for thisExp (ExperimentHandler)
-thisExp.addData('get_ask_for_flip.keys',get_ask_for_flip.keys)
-if get_ask_for_flip.keys != None:  # we had a response
-    thisExp.addData('get_ask_for_flip.rt', get_ask_for_flip.rt)
-thisExp.nextEntry()
-my_key_pressed = get_ask_for_flip.keys
-my_win_viewScale_options = {'1':[False,False], '2':[True,False],'3':[False,True],'4':[True,True]} # of course it is a comma - like everything in pyhton
- 
-GLOB_XFLIP = my_win_viewScale_options[my_key_pressed][0]
-GLOB_YFLIP = my_win_viewScale_options[my_key_pressed][1]
-# store for later -- apply just before giving instructions
-# my_win_viewScale_option = my_win_viewScale_options[my_key_pressed]
-# the Routine "ask_for_flip" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 #------Prepare to start Routine "do_video"-------
@@ -766,7 +663,7 @@ frameN = -1
 text_stim = visual.TextStim(win=win, ori=0, name='text_4',
     text='0',    font=u'Arial',
     pos=[0, 0], height=0.1*SIZE_MUL_FACTOR, wrapWidth=None,
-    color=u'red', colorSpace='rgb', opacity=1,flipHoriz=GLOB_XFLIP,flipVert=GLOB_YFLIP,
+    color=u'red', colorSpace='rgb', opacity=1,
     depth=0.0)
 
 # txt event codes - declaration
@@ -1032,10 +929,6 @@ print('event struct - initialized')
 print(evt.isAlive())
 # send stuff now - with evt.send(10), for example.
 # send it either in the main loop - or in the audio, video and letter threads - i passed the object over there, too.
-if GLOB_XFLIP:
-    instr_text.setFlipHoriz(True)
-if GLOB_YFLIP:
-    instr_text.setFlipVert(True)
 key_begin = event.BuilderKeyResponse()  # create an object of type KeyResponse
 key_begin.status = NOT_STARTED
 # keep track of which components have finished
@@ -1061,7 +954,6 @@ while continueRoutine:
         instr_text.tStart = t  # underestimates by a little under one frame
         instr_text.frameNStart = frameN  # exact frame index
         instr_text.setAutoDraw(True)
-    
     
     # *key_begin* updates
     if t >= 0.0 and key_begin.status == NOT_STARTED:
@@ -1105,7 +997,6 @@ while continueRoutine:
 for thisComponent in instrComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-
 
 # check responses
 if key_begin.keys in ['', [], None]:  # No response was made
@@ -1162,16 +1053,9 @@ all_timings = all_stims
 max_time = 340.;
 
 
-if GLOB_XFLIP:
-    right_visibleWedge_value =  [179.99, 360.]
-    left_visibleWedge_value = [0., 181.]
-else:
-    right_visibleWedge_value = [0., 181.]
-    left_visibleWedge_value =  [179.99, 360.]
-    
 # right checkerboard stimuli
 right_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.*SIZE_MUL_FACTOR,
-                             visibleWedge=right_visibleWedge_value, radialCycles=5,
+                             visibleWedge=[0., 181.], radialCycles=5,
                              angularCycles=10, interpolate=False, 
                              angularPhase=2*3.141592/360/20,autoLog=False)
 # right_cb_fl=right_cb
@@ -1179,14 +1063,14 @@ right_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.*SIZE_MUL_FACTO
   
 # left checkerboard stimuli
 left_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.*SIZE_MUL_FACTOR,
-                            visibleWedge=left_visibleWedge_value, radialCycles=5,
+                            visibleWedge=[179.99, 360.], radialCycles=5,
                             angularCycles=10, interpolate=False,
                             angularPhase=2*3.141592/360/20,autoLog=False)
 # left_cb_fl=left_cb
 # left_cb_fl.setAngularPhase(90)
 
   
-# fixation dot - doesn't need flippi'n.
+# fixation dot
 fixation = visual.PatchStim(win, color=-0.25, colorSpace='rgb', tex=None,
                             mask='circle', size=0.12*SIZE_MUL_FACTOR)
 
@@ -1285,7 +1169,7 @@ def textFlip(win,vis_contents,video_is_running,lstream_ev_container):
 
         # ugly code to make letters work nice with other flip() stuff that I do.
         while len(lstream_ev_container)>0:
-            # print(lstream_ev_container)
+            print(lstream_ev_container)
             evt.send(lstream_ev_container.pop(0))
         win.flip()
         # empty it
@@ -1672,8 +1556,6 @@ continueRoutine=False
 
 # the Routine "end" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
-
-
 
 
 

@@ -1,0 +1,907 @@
+10.3695 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([ 0.,  0.,  0.]), colorSpace='rgb', fullscr=UNKNOWN, gamma=None, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor instance at 0x04F9EDA0>, name='window1', pos=[0, 0], screen=0, size=array([1600,  900]), stereo=False, units=u'norm', useFBO=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.3696 	EXP 	window1: recordFrameIntervals = False
+10.5383 	EXP 	window1: recordFrameIntervals = True
+10.7257 	EXP 	window1: recordFrameIntervals = False
+10.9320 	EXP 	Created text_ask_for_version = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='text_ask_for_version', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+11.1577 	EXP 	Set  sound=stim/audio_40Hz_L.wav
+11.1584 	EXP 	Set  sound=stim/audio_55Hz_L.wav
+11.1589 	EXP 	Set  sound=stim/audio_40Hz_R.wav
+11.1595 	EXP 	Set  sound=stim/audio_55Hz_R.wav
+11.1595 	EXP 	Set Sound  volume=1.000
+11.1595 	EXP 	Set Sound  volume=1.000
+11.1595 	EXP 	Set Sound  volume=1.000
+11.1595 	EXP 	Set Sound  volume=1.000
+11.2172 	EXP 	Created select_eeg_system = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='select_eeg_system', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+11.2439 	EXP 	Created instr_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='instr_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=unicode(...), units=u'norm', win=Window(...), wrapWidth=1)
+11.2571 	EXP 	Created end_text = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, name='end_text', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,  255.,  255.]), text=u'This was the end - Thank you!', units=u'norm', win=Window(...), wrapWidth=1)
+11.2693 	EXP 	text_ask_for_version: autoDraw = True
+13.8899 	DATA 	Keypress: 1
+13.8970 	EXP 	Created text_4 = TextStim(alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color=u'red', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font=u'Arial', fontFiles=[], height=0.1, italic=False, name='text_4', opacity=1.0, ori=0, pos=array([ 0.,  0.]), rgb=array([ 255.,    0.,    0.]), text=u'0', units=u'norm', win=Window(...), wrapWidth=1)
+13.9054 	EXP 	text_ask_for_version: autoDraw = False
+13.9054 	EXP 	select_eeg_system: autoDraw = True
+14.1611 	DATA 	Keypress: 2
+14.2469 	EXP 	select_eeg_system: autoDraw = False
+14.2469 	EXP 	instr_text: autoDraw = True
+15.1145 	DATA 	Keypress: space
+15.1534 	EXP 	Created unnamed PatchStim = PatchStim(autoDraw=False, autoLog=True, color=array([-0.25, -0.25, -0.25]), colorSpace='rgb', contrast=1.0, depth=0, interpolate=False, mask='circle', maskParams=None, name='unnamed PatchStim', opacity=1.0, ori=0.0, phase=array([ 0.,  0.]), pos=array([ 0.,  0.]), rgbPedestal=array([ 0.,  0.,  0.]), sf=array([ 1.,  1.]), size=array([ 0.12,  0.12]), tex=None, texRes=128, units=u'norm', win=Window(...))
+15.1637 	EXP 	instr_text: autoDraw = False
+16.1990 	EXP 	text_4: text = '1'
+16.1990 	EXP 	text_4: text = u'1'
+17.1815 	EXP 	text_4: text = '2'
+17.1815 	EXP 	text_4: text = u'2'
+18.1987 	EXP 	text_4: text = '3'
+18.1987 	EXP 	text_4: text = u'3'
+19.1987 	EXP 	text_4: text = '4'
+19.1987 	EXP 	text_4: text = u'4'
+20.1987 	EXP 	text_4: text = '5'
+20.1987 	EXP 	text_4: text = u'5'
+21.1987 	EXP 	text_4: text = '6'
+21.1987 	EXP 	text_4: text = u'6'
+22.1987 	EXP 	text_4: text = '7'
+22.1987 	EXP 	text_4: text = u'7'
+23.1994 	EXP 	text_4: text = '8'
+23.1994 	EXP 	text_4: text = u'8'
+24.1821 	EXP 	text_4: text = '7'
+24.1821 	EXP 	text_4: text = u'7'
+24.8217 	DATA 	Keypress: slash
+25.1565 	EXP 	Sound  started
+25.1996 	EXP 	text_4: text = '6'
+25.1996 	EXP 	text_4: text = u'6'
+26.2002 	EXP 	text_4: text = '5'
+26.2002 	EXP 	text_4: text = u'5'
+26.3595 	EXP 	Sound  started
+27.2008 	EXP 	text_4: text = '4'
+27.2008 	EXP 	text_4: text = u'4'
+27.5621 	EXP 	Sound  started
+28.2017 	EXP 	text_4: text = '3'
+28.2017 	EXP 	text_4: text = u'3'
+28.7650 	EXP 	Sound  started
+29.2017 	EXP 	text_4: text = '2'
+29.2017 	EXP 	text_4: text = u'2'
+29.9678 	EXP 	Sound  started
+30.1847 	EXP 	text_4: text = '1'
+30.1847 	EXP 	text_4: text = u'1'
+31.1704 	EXP 	Sound  started
+31.1845 	EXP 	text_4: text = '2'
+31.1845 	EXP 	text_4: text = u'2'
+31.7816 	DATA 	Keypress: slash
+32.2016 	EXP 	text_4: text = '3'
+32.2016 	EXP 	text_4: text = u'3'
+32.3732 	EXP 	Sound  started
+33.2866 	EXP 	text_4: text = '4'
+33.2866 	EXP 	text_4: text = u'4'
+33.5760 	EXP 	Sound  started
+34.2548 	EXP 	text_4: text = '5'
+34.2548 	EXP 	text_4: text = u'5'
+34.7791 	EXP 	Sound  started
+35.2053 	EXP 	text_4: text = '6'
+35.2053 	EXP 	text_4: text = u'6'
+36.2922 	EXP 	text_4: text = '7'
+36.2922 	EXP 	text_4: text = u'7'
+37.2608 	EXP 	text_4: text = '8'
+37.2608 	EXP 	text_4: text = u'8'
+38.2114 	EXP 	text_4: text = '9'
+38.2114 	EXP 	text_4: text = u'9'
+39.2981 	EXP 	text_4: text = '8'
+39.2981 	EXP 	text_4: text = u'8'
+39.8617 	DATA 	Keypress: slash
+40.2827 	EXP 	text_4: text = '7'
+40.2827 	EXP 	text_4: text = u'7'
+41.2164 	EXP 	text_4: text = '6'
+41.2164 	EXP 	text_4: text = u'6'
+42.3189 	EXP 	text_4: text = '5'
+42.3189 	EXP 	text_4: text = u'5'
+43.2864 	EXP 	text_4: text = '4'
+43.2864 	EXP 	text_4: text = u'4'
+44.2203 	EXP 	text_4: text = '3'
+44.2203 	EXP 	text_4: text = u'3'
+45.1558 	EXP 	Sound  started
+45.2044 	EXP 	text_4: text = '4'
+45.2044 	EXP 	text_4: text = u'4'
+45.9737 	DATA 	Keypress: slash
+46.2907 	EXP 	text_4: text = '5'
+46.2907 	EXP 	text_4: text = u'5'
+46.3588 	EXP 	Sound  started
+47.2404 	EXP 	text_4: text = '6'
+47.2404 	EXP 	text_4: text = u'6'
+47.5616 	EXP 	Sound  started
+48.2079 	EXP 	text_4: text = '7'
+48.2079 	EXP 	text_4: text = u'7'
+48.7645 	EXP 	Sound  started
+49.3106 	EXP 	text_4: text = '8'
+49.3106 	EXP 	text_4: text = u'8'
+49.9672 	EXP 	Sound  started
+50.1941 	EXP 	text_4: text = '9'
+50.1941 	EXP 	text_4: text = u'9'
+51.1699 	EXP 	Sound  started
+51.1946 	EXP 	text_4: text = '0'
+51.1946 	EXP 	text_4: text = u'0'
+51.6377 	DATA 	Keypress: slash
+52.1948 	EXP 	text_4: text = '1'
+52.1948 	EXP 	text_4: text = u'1'
+52.3727 	EXP 	Sound  started
+53.1947 	EXP 	text_4: text = '2'
+53.1947 	EXP 	text_4: text = u'2'
+53.5755 	EXP 	Sound  started
+54.1952 	EXP 	text_4: text = '3'
+54.1952 	EXP 	text_4: text = u'3'
+54.7786 	EXP 	Sound  started
+55.1957 	EXP 	text_4: text = '4'
+55.1957 	EXP 	text_4: text = u'4'
+56.1957 	EXP 	text_4: text = '3'
+56.1957 	EXP 	text_4: text = u'3'
+56.7574 	DATA 	Keypress: slash
+57.1961 	EXP 	text_4: text = '2'
+57.1961 	EXP 	text_4: text = u'2'
+58.1962 	EXP 	text_4: text = '1'
+58.1962 	EXP 	text_4: text = u'1'
+59.1962 	EXP 	text_4: text = '0'
+59.1962 	EXP 	text_4: text = u'0'
+60.1961 	EXP 	text_4: text = '9'
+60.1961 	EXP 	text_4: text = u'9'
+61.1968 	EXP 	text_4: text = '8'
+61.1968 	EXP 	text_4: text = u'8'
+61.2854 	DATA 	Keypress: slash
+62.1974 	EXP 	text_4: text = '7'
+62.1974 	EXP 	text_4: text = u'7'
+63.1976 	EXP 	text_4: text = '6'
+63.1976 	EXP 	text_4: text = u'6'
+64.1980 	EXP 	text_4: text = '5'
+64.1980 	EXP 	text_4: text = u'5'
+65.1562 	EXP 	Sound  started
+65.1978 	EXP 	text_4: text = '4'
+65.1978 	EXP 	text_4: text = u'4'
+66.1982 	EXP 	text_4: text = '3'
+66.1982 	EXP 	text_4: text = u'3'
+66.5593 	EXP 	Sound  started
+67.1979 	EXP 	text_4: text = '2'
+67.1979 	EXP 	text_4: text = u'2'
+67.9620 	EXP 	Sound  started
+68.2838 	EXP 	text_4: text = '1'
+68.2838 	EXP 	text_4: text = u'1'
+69.2506 	EXP 	text_4: text = '0'
+69.2506 	EXP 	text_4: text = u'0'
+69.3650 	EXP 	Sound  started
+70.3383 	EXP 	text_4: text = '9'
+70.3383 	EXP 	text_4: text = u'9'
+70.6933 	DATA 	Keypress: slash
+70.7678 	EXP 	Sound  started
+71.2905 	EXP 	text_4: text = '8'
+71.2905 	EXP 	text_4: text = u'8'
+72.1707 	EXP 	Sound  started
+72.2592 	EXP 	text_4: text = '7'
+72.2592 	EXP 	text_4: text = u'7'
+73.2106 	EXP 	text_4: text = '6'
+73.2106 	EXP 	text_4: text = u'6'
+73.5736 	EXP 	Sound  started
+74.2975 	EXP 	text_4: text = '5'
+74.2975 	EXP 	text_4: text = u'5'
+74.9771 	EXP 	Sound  started
+75.2642 	EXP 	text_4: text = '6'
+75.2642 	EXP 	text_4: text = u'6'
+76.2155 	EXP 	text_4: text = '7'
+76.2155 	EXP 	text_4: text = u'7'
+77.3028 	EXP 	text_4: text = '8'
+77.3028 	EXP 	text_4: text = u'8'
+77.7656 	DATA 	Keypress: slash
+78.2875 	EXP 	text_4: text = '9'
+78.2875 	EXP 	text_4: text = u'9'
+79.2208 	EXP 	text_4: text = '0'
+79.2208 	EXP 	text_4: text = u'0'
+80.3240 	EXP 	text_4: text = '1'
+80.3240 	EXP 	text_4: text = u'1'
+81.2917 	EXP 	text_4: text = '2'
+81.2917 	EXP 	text_4: text = u'2'
+82.2248 	EXP 	text_4: text = '1'
+82.2248 	EXP 	text_4: text = u'1'
+83.2085 	EXP 	text_4: text = '0'
+83.2085 	EXP 	text_4: text = u'0'
+84.2952 	EXP 	text_4: text = '9'
+84.2952 	EXP 	text_4: text = u'9'
+85.0773 	DATA 	Keypress: slash
+85.1947 	EXP 	text_4: text = '8'
+85.1947 	EXP 	text_4: text = u'8'
+86.1947 	EXP 	text_4: text = '7'
+86.1947 	EXP 	text_4: text = u'7'
+87.1948 	EXP 	text_4: text = '6'
+87.1948 	EXP 	text_4: text = u'6'
+88.1955 	EXP 	text_4: text = '5'
+88.1955 	EXP 	text_4: text = u'5'
+89.1950 	EXP 	text_4: text = '6'
+89.1950 	EXP 	text_4: text = u'6'
+90.0371 	DATA 	Keypress: slash
+90.1953 	EXP 	text_4: text = '7'
+90.1953 	EXP 	text_4: text = u'7'
+91.1953 	EXP 	text_4: text = '8'
+91.1953 	EXP 	text_4: text = u'8'
+92.1959 	EXP 	text_4: text = '9'
+92.1959 	EXP 	text_4: text = u'9'
+92.6557 	EXP 	Sound  started
+93.1956 	EXP 	text_4: text = '0'
+93.1956 	EXP 	text_4: text = u'0'
+93.5090 	DATA 	Keypress: slash
+94.0589 	EXP 	Sound  started
+94.1959 	EXP 	text_4: text = '1'
+94.1959 	EXP 	text_4: text = u'1'
+95.1965 	EXP 	text_4: text = '2'
+95.1965 	EXP 	text_4: text = u'2'
+95.4619 	EXP 	Sound  started
+96.1976 	EXP 	text_4: text = '1'
+96.1976 	EXP 	text_4: text = u'1'
+96.8646 	EXP 	Sound  started
+97.1984 	EXP 	text_4: text = '0'
+97.1984 	EXP 	text_4: text = u'0'
+98.0530 	DATA 	Keypress: slash
+98.1980 	EXP 	text_4: text = '9'
+98.1980 	EXP 	text_4: text = u'9'
+98.2680 	EXP 	Sound  started
+99.1991 	EXP 	text_4: text = '8'
+99.1991 	EXP 	text_4: text = u'8'
+99.6706 	EXP 	Sound  started
+100.1995 	EXP 	text_4: text = '7'
+100.1995 	EXP 	text_4: text = u'7'
+101.0735 	EXP 	Sound  started
+101.1820 	EXP 	text_4: text = '6'
+101.1820 	EXP 	text_4: text = u'6'
+102.1994 	EXP 	text_4: text = '5'
+102.1994 	EXP 	text_4: text = u'5'
+102.4764 	EXP 	Sound  started
+103.2001 	EXP 	text_4: text = '6'
+103.2001 	EXP 	text_4: text = u'6'
+103.8826 	EXP 	Sound  started
+104.1982 	DATA 	Keypress: slash
+104.2548 	EXP 	text_4: text = '7'
+104.2548 	EXP 	text_4: text = u'7'
+105.2410 	EXP 	text_4: text = '8'
+105.2410 	EXP 	text_4: text = u'8'
+105.2940 	EXP 	Sound  started
+106.2091 	EXP 	text_4: text = '9'
+106.2091 	EXP 	text_4: text = u'9'
+106.6972 	EXP 	Sound  started
+107.2607 	EXP 	text_4: text = '0'
+107.2607 	EXP 	text_4: text = u'0'
+107.5670 	DATA 	Keypress: slash
+108.1000 	EXP 	Sound  started
+108.2462 	EXP 	text_4: text = '1'
+108.2462 	EXP 	text_4: text = u'1'
+109.2140 	EXP 	text_4: text = '0'
+109.2140 	EXP 	text_4: text = u'0'
+109.5047 	EXP 	Sound  started
+109.9250 	DATA 	Keypress: slash
+110.1995 	EXP 	text_4: text = '9'
+110.1995 	EXP 	text_4: text = u'9'
+111.2530 	EXP 	text_4: text = '8'
+111.2530 	EXP 	text_4: text = u'8'
+112.2225 	EXP 	text_4: text = '7'
+112.2225 	EXP 	text_4: text = u'7'
+113.2067 	EXP 	text_4: text = '6'
+113.2067 	EXP 	text_4: text = u'6'
+114.1926 	EXP 	text_4: text = '5'
+114.1926 	EXP 	text_4: text = u'5'
+115.2453 	EXP 	text_4: text = '4'
+115.2453 	EXP 	text_4: text = u'4'
+116.2126 	EXP 	text_4: text = '5'
+116.2126 	EXP 	text_4: text = u'5'
+116.9970 	DATA 	Keypress: slash
+117.1987 	EXP 	text_4: text = '6'
+117.1987 	EXP 	text_4: text = u'6'
+118.2519 	EXP 	text_4: text = '7'
+118.2519 	EXP 	text_4: text = u'7'
+119.2208 	EXP 	text_4: text = '8'
+119.2208 	EXP 	text_4: text = u'8'
+120.1883 	EXP 	text_4: text = '9'
+120.1883 	EXP 	text_4: text = u'9'
+121.1884 	EXP 	text_4: text = '0'
+121.1884 	EXP 	text_4: text = u'0'
+121.5888 	DATA 	Keypress: slash
+122.1885 	EXP 	text_4: text = '1'
+122.1885 	EXP 	text_4: text = u'1'
+123.1890 	EXP 	text_4: text = '0'
+123.1890 	EXP 	text_4: text = u'0'
+124.1892 	EXP 	text_4: text = '9'
+124.1892 	EXP 	text_4: text = u'9'
+124.8848 	DATA 	Keypress: slash
+125.2063 	EXP 	text_4: text = '8'
+125.2063 	EXP 	text_4: text = u'8'
+126.1892 	EXP 	text_4: text = '7'
+126.1892 	EXP 	text_4: text = u'7'
+127.1893 	EXP 	text_4: text = '6'
+127.1893 	EXP 	text_4: text = u'6'
+127.6561 	EXP 	Sound  started
+128.1892 	EXP 	text_4: text = '5'
+128.1892 	EXP 	text_4: text = u'5'
+128.8590 	EXP 	Sound  started
+129.1896 	EXP 	text_4: text = '6'
+129.1896 	EXP 	text_4: text = u'6'
+130.0618 	EXP 	Sound  started
+130.2579 	EXP 	text_4: text = '7'
+130.2579 	EXP 	text_4: text = u'7'
+131.2094 	EXP 	text_4: text = '8'
+131.2094 	EXP 	text_4: text = u'8'
+131.2650 	EXP 	Sound  started
+132.2796 	EXP 	text_4: text = '9'
+132.2796 	EXP 	text_4: text = u'9'
+132.4674 	EXP 	Sound  started
+133.2655 	EXP 	text_4: text = '0'
+133.2655 	EXP 	text_4: text = u'0'
+133.6528 	DATA 	Keypress: slash
+133.6706 	EXP 	Sound  started
+134.2330 	EXP 	text_4: text = '1'
+134.2330 	EXP 	text_4: text = u'1'
+134.8733 	EXP 	Sound  started
+135.2007 	EXP 	text_4: text = '2'
+135.2007 	EXP 	text_4: text = u'2'
+136.0764 	EXP 	Sound  started
+136.2025 	EXP 	text_4: text = '1'
+136.2025 	EXP 	text_4: text = u'1'
+136.8368 	DATA 	Keypress: slash
+137.2385 	EXP 	text_4: text = '0'
+137.2385 	EXP 	text_4: text = u'0'
+137.2788 	EXP 	Sound  started
+138.2228 	EXP 	text_4: text = '9'
+138.2228 	EXP 	text_4: text = u'9'
+138.4815 	EXP 	Sound  started
+138.7250 	DATA 	Keypress: slash
+139.2090 	EXP 	text_4: text = '8'
+139.2090 	EXP 	text_4: text = u'8'
+139.6845 	EXP 	Sound  started
+140.1950 	EXP 	text_4: text = '7'
+140.1950 	EXP 	text_4: text = u'7'
+140.8872 	EXP 	Sound  started
+141.1954 	EXP 	text_4: text = '6'
+141.1954 	EXP 	text_4: text = u'6'
+142.0901 	EXP 	Sound  started
+142.1954 	EXP 	text_4: text = '5'
+142.1954 	EXP 	text_4: text = u'5'
+143.1953 	EXP 	text_4: text = '4'
+143.1953 	EXP 	text_4: text = u'4'
+143.2931 	EXP 	Sound  started
+144.1956 	EXP 	text_4: text = '3'
+144.1956 	EXP 	text_4: text = u'3'
+144.4956 	EXP 	Sound  started
+145.1961 	EXP 	text_4: text = '2'
+145.1961 	EXP 	text_4: text = u'2'
+146.1962 	EXP 	text_4: text = '1'
+146.1962 	EXP 	text_4: text = u'1'
+147.1965 	EXP 	text_4: text = '0'
+147.1965 	EXP 	text_4: text = u'0'
+147.4925 	DATA 	Keypress: slash
+148.1964 	EXP 	text_4: text = '9'
+148.1964 	EXP 	text_4: text = u'9'
+149.1965 	EXP 	text_4: text = '8'
+149.1965 	EXP 	text_4: text = u'8'
+150.2818 	EXP 	text_4: text = '7'
+150.2818 	EXP 	text_4: text = u'7'
+151.2496 	EXP 	text_4: text = '8'
+151.2496 	EXP 	text_4: text = u'8'
+151.8926 	DATA 	Keypress: slash
+152.2339 	EXP 	text_4: text = '9'
+152.2339 	EXP 	text_4: text = u'9'
+153.2850 	EXP 	text_4: text = '0'
+153.2850 	EXP 	text_4: text = u'0'
+153.7005 	DATA 	Keypress: slash
+154.2687 	EXP 	text_4: text = '1'
+154.2687 	EXP 	text_4: text = u'1'
+155.2365 	EXP 	text_4: text = '2'
+155.2365 	EXP 	text_4: text = u'2'
+156.2025 	EXP 	text_4: text = '3'
+156.2025 	EXP 	text_4: text = u'3'
+157.2722 	EXP 	text_4: text = '4'
+157.2722 	EXP 	text_4: text = u'4'
+158.2572 	EXP 	text_4: text = '3'
+158.2572 	EXP 	text_4: text = u'3'
+158.9703 	DATA 	Keypress: slash
+159.2072 	EXP 	text_4: text = '2'
+159.2072 	EXP 	text_4: text = u'2'
+160.2085 	EXP 	text_4: text = '1'
+160.2085 	EXP 	text_4: text = u'1'
+161.1921 	EXP 	text_4: text = '0'
+161.1921 	EXP 	text_4: text = u'0'
+162.1929 	EXP 	text_4: text = '9'
+162.1929 	EXP 	text_4: text = u'9'
+162.6556 	EXP 	Sound  started
+162.8364 	DATA 	Keypress: slash
+163.1926 	EXP 	text_4: text = '8'
+163.1926 	EXP 	text_4: text = u'8'
+163.8587 	EXP 	Sound  started
+164.1930 	EXP 	text_4: text = '9'
+164.1930 	EXP 	text_4: text = u'9'
+165.0615 	EXP 	Sound  started
+165.1084 	DATA 	Keypress: slash
+165.1934 	EXP 	text_4: text = '0'
+165.1934 	EXP 	text_4: text = u'0'
+166.1934 	EXP 	text_4: text = '1'
+166.1934 	EXP 	text_4: text = u'1'
+166.2643 	EXP 	Sound  started
+167.1936 	EXP 	text_4: text = '2'
+167.1936 	EXP 	text_4: text = u'2'
+167.4669 	EXP 	Sound  started
+168.1938 	EXP 	text_4: text = '3'
+168.1938 	EXP 	text_4: text = u'3'
+168.6699 	EXP 	Sound  started
+169.1944 	EXP 	text_4: text = '4'
+169.1944 	EXP 	text_4: text = u'4'
+169.8726 	EXP 	Sound  started
+170.2800 	EXP 	text_4: text = '5'
+170.2800 	EXP 	text_4: text = u'5'
+171.0756 	EXP 	Sound  started
+171.2478 	EXP 	text_4: text = '6'
+171.2478 	EXP 	text_4: text = u'6'
+172.2322 	EXP 	text_4: text = '7'
+172.2322 	EXP 	text_4: text = u'7'
+172.2784 	EXP 	Sound  started
+173.3014 	EXP 	text_4: text = '6'
+173.3014 	EXP 	text_4: text = u'6'
+173.4821 	EXP 	Sound  started
+173.8955 	DATA 	Keypress: slash
+174.2681 	EXP 	text_4: text = '5'
+174.2681 	EXP 	text_4: text = u'5'
+174.6849 	EXP 	Sound  started
+175.2356 	EXP 	text_4: text = '4'
+175.2356 	EXP 	text_4: text = u'4'
+175.8876 	EXP 	Sound  started
+176.2038 	EXP 	text_4: text = '3'
+176.2038 	EXP 	text_4: text = u'3'
+177.0904 	EXP 	Sound  started
+177.2719 	EXP 	text_4: text = '2'
+177.2719 	EXP 	text_4: text = u'2'
+178.2557 	EXP 	text_4: text = '1'
+178.2557 	EXP 	text_4: text = u'1'
+178.2934 	EXP 	Sound  started
+179.2065 	EXP 	text_4: text = '0'
+179.2065 	EXP 	text_4: text = u'0'
+179.4965 	EXP 	Sound  started
+179.9405 	DATA 	Keypress: slash
+180.2088 	EXP 	text_4: text = '9'
+180.2088 	EXP 	text_4: text = u'9'
+181.1918 	EXP 	text_4: text = '8'
+181.1918 	EXP 	text_4: text = u'8'
+182.1918 	EXP 	text_4: text = '7'
+182.1918 	EXP 	text_4: text = u'7'
+183.1920 	EXP 	text_4: text = '6'
+183.1920 	EXP 	text_4: text = u'6'
+184.1919 	EXP 	text_4: text = '5'
+184.1919 	EXP 	text_4: text = u'5'
+185.1918 	EXP 	text_4: text = '6'
+185.1918 	EXP 	text_4: text = u'6'
+186.1920 	EXP 	text_4: text = '7'
+186.1920 	EXP 	text_4: text = u'7'
+187.1919 	EXP 	text_4: text = '8'
+187.1919 	EXP 	text_4: text = u'8'
+188.1923 	EXP 	text_4: text = '9'
+188.1923 	EXP 	text_4: text = u'9'
+188.5482 	DATA 	Keypress: slash
+189.1929 	EXP 	text_4: text = '0'
+189.1929 	EXP 	text_4: text = u'0'
+189.9401 	DATA 	Keypress: slash
+190.1561 	EXP 	Sound  started
+190.1930 	EXP 	text_4: text = '1'
+190.1930 	EXP 	text_4: text = u'1'
+191.1927 	EXP 	text_4: text = '2'
+191.1927 	EXP 	text_4: text = u'2'
+191.5592 	EXP 	Sound  started
+192.1929 	EXP 	text_4: text = '3'
+192.1929 	EXP 	text_4: text = u'3'
+192.9624 	EXP 	Sound  started
+193.1933 	EXP 	text_4: text = '2'
+193.1933 	EXP 	text_4: text = u'2'
+193.8281 	DATA 	Keypress: slash
+194.1939 	EXP 	text_4: text = '1'
+194.1939 	EXP 	text_4: text = u'1'
+194.3653 	EXP 	Sound  started
+195.1936 	EXP 	text_4: text = '0'
+195.1936 	EXP 	text_4: text = u'0'
+195.7160 	DATA 	Keypress: slash
+195.7683 	EXP 	Sound  started
+196.1936 	EXP 	text_4: text = '9'
+196.1936 	EXP 	text_4: text = u'9'
+197.1712 	EXP 	Sound  started
+197.1943 	EXP 	text_4: text = '8'
+197.1943 	EXP 	text_4: text = u'8'
+198.2121 	EXP 	text_4: text = '7'
+198.2121 	EXP 	text_4: text = u'7'
+198.5737 	EXP 	Sound  started
+199.2488 	EXP 	text_4: text = '6'
+199.2488 	EXP 	text_4: text = u'6'
+199.9767 	EXP 	Sound  started
+200.2352 	EXP 	text_4: text = '5'
+200.2352 	EXP 	text_4: text = u'5'
+201.2024 	EXP 	text_4: text = '6'
+201.2024 	EXP 	text_4: text = u'6'
+202.0521 	DATA 	Keypress: slash
+202.2726 	EXP 	text_4: text = '7'
+202.2726 	EXP 	text_4: text = u'7'
+203.2414 	EXP 	text_4: text = '8'
+203.2414 	EXP 	text_4: text = u'8'
+204.2270 	EXP 	text_4: text = '9'
+204.2270 	EXP 	text_4: text = u'9'
+205.1962 	EXP 	text_4: text = '0'
+205.1962 	EXP 	text_4: text = u'0'
+205.6546 	DATA 	Keypress: slash
+206.2495 	EXP 	text_4: text = '1'
+206.2495 	EXP 	text_4: text = u'1'
+207.2191 	EXP 	text_4: text = '2'
+207.2191 	EXP 	text_4: text = u'2'
+208.2037 	EXP 	text_4: text = '1'
+208.2037 	EXP 	text_4: text = u'1'
+209.2057 	EXP 	text_4: text = '0'
+209.2057 	EXP 	text_4: text = u'0'
+209.6360 	DATA 	Keypress: slash
+210.1592 	EXP 	Sound  started
+210.2423 	EXP 	text_4: text = '9'
+210.2423 	EXP 	text_4: text = u'9'
+211.2099 	EXP 	text_4: text = '8'
+211.2099 	EXP 	text_4: text = u'8'
+211.5616 	EXP 	Sound  started
+212.1949 	EXP 	text_4: text = '7'
+212.1949 	EXP 	text_4: text = u'7'
+212.9645 	EXP 	Sound  started
+213.2491 	EXP 	text_4: text = '6'
+213.2491 	EXP 	text_4: text = u'6'
+214.2339 	EXP 	text_4: text = '7'
+214.2339 	EXP 	text_4: text = u'7'
+214.3716 	EXP 	Sound  started
+214.8840 	DATA 	Keypress: slash
+215.1860 	EXP 	text_4: text = '8'
+215.1860 	EXP 	text_4: text = u'8'
+215.7743 	EXP 	Sound  started
+216.1854 	EXP 	text_4: text = '9'
+216.1854 	EXP 	text_4: text = u'9'
+217.1856 	EXP 	text_4: text = '0'
+217.1856 	EXP 	text_4: text = u'0'
+217.1880 	EXP 	Sound  started
+217.4918 	DATA 	Keypress: slash
+218.2025 	EXP 	text_4: text = '1'
+218.2025 	EXP 	text_4: text = u'1'
+218.5904 	EXP 	Sound  started
+219.2029 	EXP 	text_4: text = '2'
+219.2029 	EXP 	text_4: text = u'2'
+219.9934 	EXP 	Sound  started
+220.2030 	EXP 	text_4: text = '3'
+220.2030 	EXP 	text_4: text = u'3'
+221.1865 	EXP 	text_4: text = '4'
+221.1865 	EXP 	text_4: text = u'4'
+222.1864 	EXP 	text_4: text = '5'
+222.1864 	EXP 	text_4: text = u'5'
+223.1866 	EXP 	text_4: text = '4'
+223.1866 	EXP 	text_4: text = u'4'
+224.1318 	DATA 	Keypress: slash
+224.1863 	EXP 	text_4: text = '3'
+224.1863 	EXP 	text_4: text = u'3'
+225.2033 	EXP 	text_4: text = '2'
+225.2033 	EXP 	text_4: text = u'2'
+226.2032 	EXP 	text_4: text = '1'
+226.2032 	EXP 	text_4: text = u'1'
+227.2033 	EXP 	text_4: text = '0'
+227.2033 	EXP 	text_4: text = u'0'
+227.9557 	DATA 	Keypress: slash
+228.1863 	EXP 	text_4: text = '9'
+228.1863 	EXP 	text_4: text = u'9'
+229.1867 	EXP 	text_4: text = '8'
+229.1867 	EXP 	text_4: text = u'8'
+230.1557 	EXP 	Sound  started
+230.1865 	EXP 	text_4: text = '7'
+230.1865 	EXP 	text_4: text = u'7'
+231.1865 	EXP 	text_4: text = '8'
+231.1865 	EXP 	text_4: text = u'8'
+231.5591 	EXP 	Sound  started
+231.8757 	DATA 	Keypress: slash
+232.2036 	EXP 	text_4: text = '9'
+232.2036 	EXP 	text_4: text = u'9'
+232.9864 	EXP 	Sound  started
+233.2050 	EXP 	text_4: text = '0'
+233.2050 	EXP 	text_4: text = u'0'
+233.7482 	DATA 	Keypress: slash
+234.2576 	EXP 	text_4: text = '1'
+234.2576 	EXP 	text_4: text = u'1'
+234.3890 	EXP 	Sound  started
+235.2436 	EXP 	text_4: text = '2'
+235.2436 	EXP 	text_4: text = u'2'
+235.7918 	EXP 	Sound  started
+236.2127 	EXP 	text_4: text = '3'
+236.2127 	EXP 	text_4: text = u'3'
+237.1973 	EXP 	text_4: text = '4'
+237.1973 	EXP 	text_4: text = u'4'
+237.1997 	EXP 	Sound  started
+238.2508 	EXP 	text_4: text = '5'
+238.2508 	EXP 	text_4: text = u'5'
+238.6025 	EXP 	Sound  started
+239.2196 	EXP 	text_4: text = '6'
+239.2196 	EXP 	text_4: text = u'6'
+240.0053 	EXP 	Sound  started
+240.2042 	EXP 	text_4: text = '7'
+240.2042 	EXP 	text_4: text = u'7'
+241.2578 	EXP 	text_4: text = '8'
+241.2578 	EXP 	text_4: text = u'8'
+242.2250 	EXP 	text_4: text = '7'
+242.2250 	EXP 	text_4: text = u'7'
+242.8837 	DATA 	Keypress: slash
+243.2109 	EXP 	text_4: text = '6'
+243.2109 	EXP 	text_4: text = u'6'
+244.1967 	EXP 	text_4: text = '5'
+244.1967 	EXP 	text_4: text = u'5'
+245.2328 	EXP 	text_4: text = '4'
+245.2328 	EXP 	text_4: text = u'4'
+246.2198 	EXP 	text_4: text = '3'
+246.2198 	EXP 	text_4: text = u'3'
+247.2046 	EXP 	text_4: text = '2'
+247.2046 	EXP 	text_4: text = u'2'
+248.2563 	EXP 	text_4: text = '1'
+248.2563 	EXP 	text_4: text = u'1'
+249.2236 	EXP 	text_4: text = '0'
+249.2236 	EXP 	text_4: text = u'0'
+249.6357 	DATA 	Keypress: slash
+250.2096 	EXP 	text_4: text = '1'
+250.2096 	EXP 	text_4: text = u'1'
+251.1927 	EXP 	text_4: text = '2'
+251.1927 	EXP 	text_4: text = u'2'
+252.1927 	EXP 	text_4: text = '3'
+252.1927 	EXP 	text_4: text = u'3'
+253.1927 	EXP 	text_4: text = '4'
+253.1927 	EXP 	text_4: text = u'4'
+254.1927 	EXP 	text_4: text = '5'
+254.1927 	EXP 	text_4: text = u'5'
+254.6595 	DATA 	Keypress: slash
+255.1928 	EXP 	text_4: text = '6'
+255.1928 	EXP 	text_4: text = u'6'
+256.1934 	EXP 	text_4: text = '7'
+256.1934 	EXP 	text_4: text = u'7'
+257.1933 	EXP 	text_4: text = '8'
+257.1933 	EXP 	text_4: text = u'8'
+257.6563 	EXP 	Sound  started
+258.1940 	EXP 	text_4: text = '7'
+258.1940 	EXP 	text_4: text = u'7'
+258.8594 	EXP 	Sound  started
+259.1940 	EXP 	text_4: text = '6'
+259.1940 	EXP 	text_4: text = u'6'
+259.8435 	DATA 	Keypress: slash
+260.0619 	EXP 	Sound  started
+260.1943 	EXP 	text_4: text = '5'
+260.1943 	EXP 	text_4: text = u'5'
+261.1950 	EXP 	text_4: text = '4'
+261.1950 	EXP 	text_4: text = u'4'
+261.2646 	EXP 	Sound  started
+262.1950 	EXP 	text_4: text = '3'
+262.1950 	EXP 	text_4: text = u'3'
+262.4677 	EXP 	Sound  started
+263.1953 	EXP 	text_4: text = '2'
+263.1953 	EXP 	text_4: text = u'2'
+263.6703 	EXP 	Sound  started
+264.1960 	EXP 	text_4: text = '3'
+264.1960 	EXP 	text_4: text = u'3'
+264.7234 	DATA 	Keypress: slash
+264.8732 	EXP 	Sound  started
+265.1959 	EXP 	text_4: text = '4'
+265.1959 	EXP 	text_4: text = u'4'
+266.0761 	EXP 	Sound  started
+266.1958 	EXP 	text_4: text = '5'
+266.1958 	EXP 	text_4: text = u'5'
+267.1790 	EXP 	text_4: text = '6'
+267.1790 	EXP 	text_4: text = u'6'
+267.2789 	EXP 	Sound  started
+268.1985 	EXP 	text_4: text = '7'
+268.1985 	EXP 	text_4: text = u'7'
+268.4903 	EXP 	Sound  started
+269.2509 	EXP 	text_4: text = '8'
+269.2509 	EXP 	text_4: text = u'8'
+269.6944 	EXP 	Sound  started
+270.2356 	EXP 	text_4: text = '9'
+270.2356 	EXP 	text_4: text = u'9'
+270.9000 	EXP 	Sound  started
+271.2026 	EXP 	text_4: text = '0'
+271.2026 	EXP 	text_4: text = u'0'
+271.5554 	DATA 	Keypress: slash
+272.1063 	EXP 	Sound  started
+272.2567 	EXP 	text_4: text = '1'
+272.2567 	EXP 	text_4: text = u'1'
+273.2426 	EXP 	text_4: text = '0'
+273.2426 	EXP 	text_4: text = u'0'
+273.3127 	EXP 	Sound  started
+274.2104 	EXP 	text_4: text = '9'
+274.2104 	EXP 	text_4: text = u'9'
+274.5188 	EXP 	Sound  started
+274.6434 	DATA 	Keypress: slash
+275.1973 	EXP 	text_4: text = '8'
+275.1973 	EXP 	text_4: text = u'8'
+276.2520 	EXP 	text_4: text = '7'
+276.2520 	EXP 	text_4: text = u'7'
+277.2366 	EXP 	text_4: text = '6'
+277.2366 	EXP 	text_4: text = u'6'
+278.2043 	EXP 	text_4: text = '5'
+278.2043 	EXP 	text_4: text = u'5'
+279.2567 	EXP 	text_4: text = '4'
+279.2567 	EXP 	text_4: text = u'4'
+280.2424 	EXP 	text_4: text = '5'
+280.2424 	EXP 	text_4: text = u'5'
+280.9314 	DATA 	Keypress: slash
+281.2116 	EXP 	text_4: text = '6'
+281.2116 	EXP 	text_4: text = u'6'
+282.1964 	EXP 	text_4: text = '7'
+282.1964 	EXP 	text_4: text = u'7'
+283.2506 	EXP 	text_4: text = '8'
+283.2506 	EXP 	text_4: text = u'8'
+284.2200 	EXP 	text_4: text = '9'
+284.2200 	EXP 	text_4: text = u'9'
+284.6913 	DATA 	Keypress: slash
+285.2051 	EXP 	text_4: text = '0'
+285.2051 	EXP 	text_4: text = u'0'
+286.2052 	EXP 	text_4: text = '1'
+286.2052 	EXP 	text_4: text = u'1'
+287.2054 	EXP 	text_4: text = '2'
+287.2054 	EXP 	text_4: text = u'2'
+288.1890 	EXP 	text_4: text = '3'
+288.1890 	EXP 	text_4: text = u'3'
+289.2407 	EXP 	text_4: text = '2'
+289.2407 	EXP 	text_4: text = u'2'
+290.1899 	EXP 	text_4: text = '1'
+290.1899 	EXP 	text_4: text = u'1'
+290.9631 	DATA 	Keypress: slash
+291.1902 	EXP 	text_4: text = '0'
+291.1902 	EXP 	text_4: text = u'0'
+292.1901 	EXP 	text_4: text = '9'
+292.1901 	EXP 	text_4: text = u'9'
+292.5791 	DATA 	Keypress: slash
+292.6555 	EXP 	Sound  started
+293.2074 	EXP 	text_4: text = '8'
+293.2074 	EXP 	text_4: text = u'8'
+293.8584 	EXP 	Sound  started
+294.1909 	EXP 	text_4: text = '7'
+294.1909 	EXP 	text_4: text = u'7'
+295.0614 	EXP 	Sound  started
+295.2927 	EXP 	text_4: text = '6'
+295.2927 	EXP 	text_4: text = u'6'
+296.2592 	EXP 	text_4: text = '5'
+296.2592 	EXP 	text_4: text = u'5'
+296.2640 	EXP 	Sound  started
+297.2264 	EXP 	text_4: text = '4'
+297.2264 	EXP 	text_4: text = u'4'
+297.4670 	EXP 	Sound  started
+298.2950 	EXP 	text_4: text = '3'
+298.2950 	EXP 	text_4: text = u'3'
+298.6698 	EXP 	Sound  started
+299.2608 	EXP 	text_4: text = '2'
+299.2608 	EXP 	text_4: text = u'2'
+299.8725 	EXP 	Sound  started
+300.2462 	EXP 	text_4: text = '3'
+300.2462 	EXP 	text_4: text = u'3'
+301.0272 	DATA 	Keypress: slash
+301.0753 	EXP 	Sound  started
+301.1969 	EXP 	text_4: text = '4'
+301.1969 	EXP 	text_4: text = u'4'
+302.2675 	EXP 	text_4: text = '5'
+302.2675 	EXP 	text_4: text = u'5'
+302.2783 	EXP 	Sound  started
+303.2531 	EXP 	text_4: text = '6'
+303.2531 	EXP 	text_4: text = u'6'
+303.4810 	EXP 	Sound  started
+304.2040 	EXP 	text_4: text = '7'
+304.2040 	EXP 	text_4: text = u'7'
+304.6837 	EXP 	Sound  started
+305.2046 	EXP 	text_4: text = '8'
+305.2046 	EXP 	text_4: text = u'8'
+305.8865 	EXP 	Sound  started
+306.2044 	EXP 	text_4: text = '9'
+306.2044 	EXP 	text_4: text = u'9'
+307.0895 	EXP 	Sound  started
+307.1879 	EXP 	text_4: text = '0'
+307.1879 	EXP 	text_4: text = u'0'
+308.0829 	DATA 	Keypress: slash
+308.1888 	EXP 	text_4: text = '1'
+308.1888 	EXP 	text_4: text = u'1'
+308.2922 	EXP 	Sound  started
+309.1884 	EXP 	text_4: text = '2'
+309.1884 	EXP 	text_4: text = u'2'
+309.4948 	EXP 	Sound  started
+310.1884 	EXP 	text_4: text = '1'
+310.1884 	EXP 	text_4: text = u'1'
+311.0430 	DATA 	Keypress: slash
+311.2054 	EXP 	text_4: text = '0'
+311.2054 	EXP 	text_4: text = u'0'
+312.2053 	EXP 	text_4: text = '9'
+312.2053 	EXP 	text_4: text = u'9'
+312.7390 	DATA 	Keypress: slash
+313.2058 	EXP 	text_4: text = '8'
+313.2058 	EXP 	text_4: text = u'8'
+314.1888 	EXP 	text_4: text = '7'
+314.1888 	EXP 	text_4: text = u'7'
+315.2906 	EXP 	text_4: text = '6'
+315.2906 	EXP 	text_4: text = u'6'
+316.2574 	EXP 	text_4: text = '5'
+316.2574 	EXP 	text_4: text = u'5'
+317.2254 	EXP 	text_4: text = '4'
+317.2254 	EXP 	text_4: text = u'4'
+318.2961 	EXP 	text_4: text = '5'
+318.2961 	EXP 	text_4: text = u'5'
+319.0110 	DATA 	Keypress: slash
+319.2645 	EXP 	text_4: text = '6'
+319.2645 	EXP 	text_4: text = u'6'
+320.2496 	EXP 	text_4: text = '7'
+320.2496 	EXP 	text_4: text = u'7'
+321.2001 	EXP 	text_4: text = '8'
+321.2001 	EXP 	text_4: text = u'8'
+322.2691 	EXP 	text_4: text = '9'
+322.2691 	EXP 	text_4: text = u'9'
+323.2546 	EXP 	text_4: text = '0'
+323.2546 	EXP 	text_4: text = u'0'
+323.7469 	DATA 	Keypress: slash
+324.2044 	EXP 	text_4: text = '1'
+324.2044 	EXP 	text_4: text = u'1'
+325.2068 	EXP 	text_4: text = '2'
+325.2068 	EXP 	text_4: text = u'2'
+326.2067 	EXP 	text_4: text = '1'
+326.2067 	EXP 	text_4: text = u'1'
+326.9789 	DATA 	Keypress: slash
+327.1901 	EXP 	text_4: text = '0'
+327.1901 	EXP 	text_4: text = u'0'
+327.6560 	EXP 	Sound  started
+328.1909 	EXP 	text_4: text = '9'
+328.1909 	EXP 	text_4: text = u'9'
+329.0592 	EXP 	Sound  started
+329.1908 	EXP 	text_4: text = '8'
+329.1908 	EXP 	text_4: text = u'8'
+330.1912 	EXP 	text_4: text = '7'
+330.1912 	EXP 	text_4: text = u'7'
+330.4623 	EXP 	Sound  started
+331.1919 	EXP 	text_4: text = '6'
+331.1919 	EXP 	text_4: text = u'6'
+331.8650 	EXP 	Sound  started
+332.1919 	EXP 	text_4: text = '5'
+332.1919 	EXP 	text_4: text = u'5'
+333.1921 	EXP 	text_4: text = '4'
+333.1921 	EXP 	text_4: text = u'4'
+333.2680 	EXP 	Sound  started
+334.1921 	EXP 	text_4: text = '5'
+334.1921 	EXP 	text_4: text = u'5'
+334.6710 	EXP 	Sound  started
+334.9788 	DATA 	Keypress: slash
+335.2605 	EXP 	text_4: text = '6'
+335.2605 	EXP 	text_4: text = u'6'
+336.0799 	EXP 	Sound  started
+336.2134 	EXP 	text_4: text = '7'
+336.2134 	EXP 	text_4: text = u'7'
+337.1976 	EXP 	text_4: text = '8'
+337.1976 	EXP 	text_4: text = u'8'
+337.4831 	EXP 	Sound  started
+338.2687 	EXP 	text_4: text = '9'
+338.2687 	EXP 	text_4: text = u'9'
+338.8858 	EXP 	Sound  started
+339.2360 	EXP 	text_4: text = '0'
+339.2360 	EXP 	text_4: text = u'0'
+339.7643 	DATA 	Keypress: slash
+340.2064 	EXP 	text_4: text = '1'
+340.2064 	EXP 	text_4: text = u'1'
+340.2931 	EXP 	Sound  started
+341.2078 	EXP 	text_4: text = '0'
+341.2078 	EXP 	text_4: text = u'0'
+341.6955 	EXP 	Sound  started
+342.2441 	EXP 	text_4: text = '9'
+342.2441 	EXP 	text_4: text = u'9'
+343.0991 	EXP 	Sound  started
+343.2124 	EXP 	text_4: text = '8'
+343.2124 	EXP 	text_4: text = u'8'
+344.2147 	EXP 	text_4: text = '7'
+344.2147 	EXP 	text_4: text = u'7'
+344.5225 	EXP 	Sound  started
+345.2001 	EXP 	text_4: text = '6'
+345.2001 	EXP 	text_4: text = u'6'
+346.1833 	EXP 	text_4: text = '5'
+346.1833 	EXP 	text_4: text = u'5'
+347.2002 	EXP 	text_4: text = '4'
+347.2002 	EXP 	text_4: text = u'4'
+348.2002 	EXP 	text_4: text = '3'
+348.2002 	EXP 	text_4: text = u'3'
+349.2001 	EXP 	text_4: text = '2'
+349.2001 	EXP 	text_4: text = u'2'
+350.2003 	EXP 	text_4: text = '3'
+350.2003 	EXP 	text_4: text = u'3'
+351.1999 	EXP 	text_4: text = '4'
+351.1999 	EXP 	text_4: text = u'4'
+351.9065 	DATA 	Keypress: slash
+352.1833 	EXP 	text_4: text = '5'
+352.1833 	EXP 	text_4: text = u'5'
+353.1836 	EXP 	text_4: text = '6'
+353.1836 	EXP 	text_4: text = u'6'
+354.1843 	EXP 	text_4: text = '7'
+354.1843 	EXP 	text_4: text = u'7'
+355.1678 	EXP 	end_text: autoDraw = True
+360.1356 	DATA 	Keypress: space
