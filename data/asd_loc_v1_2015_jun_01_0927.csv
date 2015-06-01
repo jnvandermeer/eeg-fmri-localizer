@@ -1,0 +1,7 @@
+get_size_key.keys,get_size_key.rt,k_ask_lower.keys,k_ask_lower.rt,k_ask_upper.keys,k_ask_upper.rt,get_ask_for_flip.keys,get_ask_for_flip.rt,eeg_resp.keys,eeg_resp.rt,key_begin.keys,key_begin.rt,date,frameRate,expName,session,participant,
+1,1.02721656521,,,,,,,,,,,2015_jun_01_0927,61.0519735374,loc_v1,001,asd,
+,,2,0.566028215486,,,,,,,,,2015_jun_01_0927,61.0519735374,loc_v1,001,asd,
+,,,,2,0.433057625589,,,,,,,2015_jun_01_0927,61.0519735374,loc_v1,001,asd,
+,,,,,,1,0.746065191415,,,,,2015_jun_01_0927,61.0519735374,loc_v1,001,asd,
+,,,,,,,,1,0.650650776486,,,2015_jun_01_0927,61.0519735374,loc_v1,001,asd,
+,,,,,,,,,,space,0.461782240178,2015_jun_01_0927,61.0519735374,loc_v1,001,asd,

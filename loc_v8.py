@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), mei 31, 2015, at 10:25
+This experiment was created using PsychoPy2 Experiment Builder (v1.82.01), juni 01, 2015, at 09:30
 If you publish work using this script please cite the relevant PsychoPy publications
   Peirce, JW (2007) PsychoPy - Psychophysics software in Python. Journal of Neuroscience Methods, 162(1-2), 8-13.
   Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy. Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
@@ -45,7 +45,7 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 # Start Code - component code to be run before the window creation
 
 # Setup the Window
-win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=False,
+win = visual.Window(size=(1440, 900), fullscr=True, screen=0, allowGUI=False, allowStencil=True,
     monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True,
     )
@@ -56,12 +56,37 @@ if expInfo['frameRate']!=None:
 else:
     frameDur = 1.0/60.0 # couldn't get a reliable measure so guess
 
+# Initialize components for Routine "test"
+testClock = core.Clock()
+
+aperture = visual.Aperture(win=win, name='aperture',
+    units='norm', size=1, pos=(0, 0))
+aperture.disable()  # disable until its actually used
+
 # Initialize components for Routine "ask_for_size"
 ask_for_sizeClock = core.Clock()
 text_ask_for_version = visual.TextStim(win=win, ori=0, name='text_ask_for_version',
-    text='(1) Normal (100%)\n(2) Smaller (75%)\n(3) Even smaller (50%)\n(4) Smallest (25%)\n(5) Bigger (125%)\n(6) Too big (150%)',    font='Arial',
+    text=u'Stimuli Size?\n\n(1) Normal (100%)\n(2) Smaller (75%)\n(3) Even smaller (50%)\n(4) Smallest (25%)\n(5) Bigger (125%)\n(6) Too big (150%)',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+    color=u'white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+
+# Initialize components for Routine "r_ask_lower_block_2"
+r_ask_lower_block_2Clock = core.Clock()
+t_ask_lower_block = visual.TextStim(win=win, ori=0, name='t_ask_lower_block',
+    text=u'Block Lower?\n1) No (0%)\n2) 10%\n3) 20%\n4) 30%\n5) 40%\n6) 50%',    font=u'Arial',
+    pos=[0, 0], height=0.1, wrapWidth=None,
+    color=u'white', colorSpace='rgb', opacity=1,
+    depth=0.0)
+
+
+# Initialize components for Routine "r_ask_upper_block"
+r_ask_upper_blockClock = core.Clock()
+t_ask_up_block = visual.TextStim(win=win, ori=0, name='t_ask_up_block',
+    text=u'Block Upper?\n1) No (0%)\n2) 10%\n3) 20%\n4) 30%\n5) 40%\n6) 50%',    font=u'Arial',
+    pos=[0, 0], height=0.1, wrapWidth=None,
+    color=u'white', colorSpace='rgb', opacity=1,
     depth=0.0)
 
 
@@ -91,7 +116,7 @@ vis_flip_other_side = True
 vis_flip_other_side_interval = 2.5 # this many seconds pass untill the otherside's contrast is flipped.
 
 # initiate my visual stimuli:
-vis_times={'8':[0.001,0.111, 0.253,0.373,0.475, 0.600],'13':[0.001,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}
+vis_times={'8':[0.011,0.111, 0.253,0.373,0.475, 0.600],'13':[0.011,0.078,0.151,0.214,0.300,0.376,0.442,0.525,0.600]}
 
 # so these are the individual STIMS (which we don't have for audio)
 visual_evt_codes={'left':{'8':87,'13':137},'right':{'8':88,'13':138}}
@@ -427,15 +452,19 @@ class ev_thread(threading.Thread):
 
     def send(self,ev):
         # just append it to the list - so it'll be taken off in the main while loop.
+        # it DOES mean, that if you have a list and yu call send on each list item of that list, you will not decrease that list in # of elements
+        # .. so pop those separately. the list in this class is a separate list to prevent that the class is still busy sending something (and NOT ready to send something new)
+        # while you are simultaneously trying to send something new - itll just go into the 'stack', then.
+        # only of conseqence when u are trying to send 100000 items at once, in a while=TRUE loop with no timer.
         self.ev_list.append(ev)
         
         
     def stop(self):
         self.stop_thread = 1
 select_eeg_system = visual.TextStim(win=win, ori=0, name='select_eeg_system',
-    text="What is your EEG system?\n\n1) Nothing (don't send triggers)\n\n2) EGI\n\n3) Brain Products",    font='Arial',
+    text=u'What is your EEG system?\n1) Nothing (dont send triggers)\n2) EGI\n3) Brain Products',    font=u'Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color='white', colorSpace='rgb', opacity=1,
+    color=u'white', colorSpace='rgb', opacity=1,
     depth=-1.0)
 
 
@@ -443,9 +472,9 @@ select_eeg_system = visual.TextStim(win=win, ori=0, name='select_eeg_system',
 instrClock = core.Clock()
 
 instr_text = visual.TextStim(win=win, ori=0, name='instr_text',
-    text=u'Mind the numbers in the middle\n\nIf the sequence changes:\n\npress a key!',    font=u'Arial',
+    text='Mind the numbers in the middle\n\nIf the sequence changes:\n\npress a key!',    font='Arial',
     pos=[0, 0], height=0.1, wrapWidth=None,
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-1.0)
 
 
@@ -466,6 +495,80 @@ end_text = visual.TextStim(win=win, ori=0, name='end_text',
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+
+#------Prepare to start Routine "test"-------
+t = 0
+testClock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+
+DO_TEST=0
+
+if DO_TEST:
+    import time
+
+
+    my_test_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.,
+                                 radialCycles=5,
+                                 angularCycles=10, interpolate=False, 
+                                 angularPhase=[0.],autoLog=False)
+    my_test_cb.draw()
+    win.flip()
+    time.sleep(1.)
+
+    # apply the aperture?
+
+
+# keep track of which components have finished
+testComponents = []
+testComponents.append(aperture)
+for thisComponent in testComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "test"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = testClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    
+    # *aperture* updates
+    if t >= 0.0 and aperture.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        aperture.tStart = t  # underestimates by a little under one frame
+        aperture.frameNStart = frameN  # exact frame index
+        aperture.enabled = True
+    if aperture.status == STARTED and t >= (0.0 + (-win.monitorFramePeriod*0.75)): #most of one frame period left
+        aperture.enabled = False
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in testComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the Esc key)
+    if endExpNow or event.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "test"-------
+for thisComponent in testComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+
+aperture.enabled = False  # just in case it was left enabled
+# the Routine "test" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 #------Prepare to start Routine "ask_for_size"-------
 t = 0
@@ -556,6 +659,239 @@ stimuli_sizes = {'1':1.00, '2':0.75,'3':0.50,'4':0.25,'5':1.25,'6':1.50} # of co
 SIZE_MUL_FACTOR = stimuli_sizes[my_key_pressed]
 
 # the Routine "ask_for_size" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+#------Prepare to start Routine "r_ask_lower_block_2"-------
+t = 0
+r_ask_lower_block_2Clock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+k_ask_lower = event.BuilderKeyResponse()  # create an object of type KeyResponse
+k_ask_lower.status = NOT_STARTED
+
+# keep track of which components have finished
+r_ask_lower_block_2Components = []
+r_ask_lower_block_2Components.append(t_ask_lower_block)
+r_ask_lower_block_2Components.append(k_ask_lower)
+for thisComponent in r_ask_lower_block_2Components:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "r_ask_lower_block_2"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = r_ask_lower_block_2Clock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *t_ask_lower_block* updates
+    if t >= 0.0 and t_ask_lower_block.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        t_ask_lower_block.tStart = t  # underestimates by a little under one frame
+        t_ask_lower_block.frameNStart = frameN  # exact frame index
+        t_ask_lower_block.setAutoDraw(True)
+    
+    # *k_ask_lower* updates
+    if t >= 0.0 and k_ask_lower.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        k_ask_lower.tStart = t  # underestimates by a little under one frame
+        k_ask_lower.frameNStart = frameN  # exact frame index
+        k_ask_lower.status = STARTED
+        # keyboard checking is just starting
+        k_ask_lower.clock.reset()  # now t=0
+        event.clearEvents(eventType='keyboard')
+    if k_ask_lower.status == STARTED:
+        theseKeys = event.getKeys(keyList=['1', '2', '3', '4', '5', '6', 'esc'])
+        
+        # check for quit:
+        if "escape" in theseKeys:
+            endExpNow = True
+        if len(theseKeys) > 0:  # at least one key was pressed
+            k_ask_lower.keys = theseKeys[-1]  # just the last key pressed
+            k_ask_lower.rt = k_ask_lower.clock.getTime()
+            # a response ends the routine
+            continueRoutine = False
+    
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in r_ask_lower_block_2Components:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the Esc key)
+    if endExpNow or event.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "r_ask_lower_block_2"-------
+for thisComponent in r_ask_lower_block_2Components:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if k_ask_lower.keys in ['', [], None]:  # No response was made
+   k_ask_lower.keys=None
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('k_ask_lower.keys',k_ask_lower.keys)
+if k_ask_lower.keys != None:  # we had a response
+    thisExp.addData('k_ask_lower.rt', k_ask_lower.rt)
+thisExp.nextEntry()
+
+
+# VERY exhaustive - can i do this better?
+my_key_pressed = k_ask_lower.keys
+lower_block_sizes = {'1':0.0,'2':0.10,'3':0.20,'4':0.30,'5':0.40,'6':0.50} # of course it is a comma - like everything in pyhton
+LOWER_BLOCK_SIZE = lower_block_sizes[my_key_pressed]
+
+from numpy import zeros
+ALS = zeros((4,2))
+
+if LOWER_BLOCK_SIZE>0.0:
+
+
+    # define shape of my aperture to be used as imput to Aperture.
+    # Aperture Lower Shape:
+
+    
+    # aperture lower boundaries:
+    ALS[0,0] = -1.
+    ALS[0,1] = -1.0 + LOWER_BLOCK_SIZE*2.
+
+    ALS[3,0] = 1.
+    ALS[3,1] = -1.0 + LOWER_BLOCK_SIZE*2.
+
+else:
+
+    ALS[0,0] = -1.
+    ALS[0,1] = -1
+
+    ALS[3,0] = 1.
+    ALS[3,1] = -1
+# the Routine "r_ask_lower_block_2" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+#------Prepare to start Routine "r_ask_upper_block"-------
+t = 0
+r_ask_upper_blockClock.reset()  # clock 
+frameN = -1
+# update component parameters for each repeat
+k_ask_upper = event.BuilderKeyResponse()  # create an object of type KeyResponse
+k_ask_upper.status = NOT_STARTED
+
+# keep track of which components have finished
+r_ask_upper_blockComponents = []
+r_ask_upper_blockComponents.append(t_ask_up_block)
+r_ask_upper_blockComponents.append(k_ask_upper)
+for thisComponent in r_ask_upper_blockComponents:
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+#-------Start Routine "r_ask_upper_block"-------
+continueRoutine = True
+while continueRoutine:
+    # get current time
+    t = r_ask_upper_blockClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *t_ask_up_block* updates
+    if t >= 0.0 and t_ask_up_block.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        t_ask_up_block.tStart = t  # underestimates by a little under one frame
+        t_ask_up_block.frameNStart = frameN  # exact frame index
+        t_ask_up_block.setAutoDraw(True)
+    
+    # *k_ask_upper* updates
+    if t >= 0.0 and k_ask_upper.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        k_ask_upper.tStart = t  # underestimates by a little under one frame
+        k_ask_upper.frameNStart = frameN  # exact frame index
+        k_ask_upper.status = STARTED
+        # keyboard checking is just starting
+        k_ask_upper.clock.reset()  # now t=0
+        event.clearEvents(eventType='keyboard')
+    if k_ask_upper.status == STARTED:
+        theseKeys = event.getKeys(keyList=['1', '2', '3', '4', '5', '6', 'esc'])
+        
+        # check for quit:
+        if "escape" in theseKeys:
+            endExpNow = True
+        if len(theseKeys) > 0:  # at least one key was pressed
+            k_ask_upper.keys = theseKeys[-1]  # just the last key pressed
+            k_ask_upper.rt = k_ask_upper.clock.getTime()
+            # a response ends the routine
+            continueRoutine = False
+    
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in r_ask_upper_blockComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # check for quit (the Esc key)
+    if endExpNow or event.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+#-------Ending Routine "r_ask_upper_block"-------
+for thisComponent in r_ask_upper_blockComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# check responses
+if k_ask_upper.keys in ['', [], None]:  # No response was made
+   k_ask_upper.keys=None
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('k_ask_upper.keys',k_ask_upper.keys)
+if k_ask_upper.keys != None:  # we had a response
+    thisExp.addData('k_ask_upper.rt', k_ask_upper.rt)
+thisExp.nextEntry()
+
+# VERY exhaustive - can i do this better?
+my_key_pressed = k_ask_upper.keys
+upper_block_sizes = {'1':0.0,'2':0.10,'3':0.20,'4':0.30,'5':0.40,'6':0.50} # of course it is a comma - like everything in pyhton
+UPPER_BLOCK_SIZE = upper_block_sizes[my_key_pressed]
+
+
+if UPPER_BLOCK_SIZE>0.0:
+
+    # aperture upper boundaries:
+    ALS[1,0] = -1.
+    ALS[1,1] = 1. - UPPER_BLOCK_SIZE*2.
+
+    ALS[2,0] = 1. 
+    ALS[2,1] = 1. - UPPER_BLOCK_SIZE*2.
+
+else:
+    ALS[1,0] = -1.
+    ALS[1,1] = 1.
+
+    ALS[2,0] = 1.
+    ALS[2,1] = 1.
+
+
+
+if UPPER_BLOCK_SIZE>0.0 or UPPER_BLOCK_SIZE>0.0: 
+    print(ALS)
+    ap_lower = visual.Aperture(win, shape=ALS, units='norm', name='lower_aperture', autoLog=None)
+    print('defined lower aperture!')
+    
+else:
+    print('no aperture needed for this experiment')
+# the Routine "r_ask_upper_block" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
 #------Prepare to start Routine "ask_for_flip"-------
@@ -1161,6 +1497,11 @@ all_stims = [[10.,20.,'audio',['left','40']],[112.5,130.,'audio',['left','40']],
 all_timings = all_stims
 max_time = 340.;
 
+# rotate the checkerboard in cycles (defined by the drawing itself, not radians or degrees.
+GLOB_CB_PHASE = 0.
+
+# mask the other checkerboard by setting its opacity property...
+MASK_OTHER_CB = True
 
 if GLOB_XFLIP:
     right_visibleWedge_value =  [179.99, 360.]
@@ -1173,7 +1514,7 @@ else:
 right_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.*SIZE_MUL_FACTOR,
                              visibleWedge=right_visibleWedge_value, radialCycles=5,
                              angularCycles=10, interpolate=False, 
-                             angularPhase=2*3.141592/360/20,autoLog=False)
+                             angularPhase=GLOB_CB_PHASE,autoLog=False)
 # right_cb_fl=right_cb
 # right_cb_fl.setAngularPhase(90)
   
@@ -1181,7 +1522,7 @@ right_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.*SIZE_MUL_FACTO
 left_cb = visual.RadialStim(win, tex='sqrXsqr', color=1, size=2.*SIZE_MUL_FACTOR,
                             visibleWedge=left_visibleWedge_value, radialCycles=5,
                             angularCycles=10, interpolate=False,
-                            angularPhase=2*3.141592/360/20,autoLog=False)
+                            angularPhase=GLOB_CB_PHASE,autoLog=False)
 # left_cb_fl=left_cb
 # left_cb_fl.setAngularPhase(90)
 
@@ -1383,19 +1724,23 @@ while True:
 
         if action=='video':
 
-           # only set this to 1 if there is a task - 'video' in the task stack.
-            video_is_running = 1
-
-            # only set the checkerboard to true if it was off, first.
-            if not video_was_running:
-                print(' -- ENABLE CHECKERBOARD')
-                new_vis_contents = showCheckerboard(win,vis_contents)
-
 
             # only create the v_next, if its value is not the (int) 0 value - so do THIS at first iteration of the block.
             # so - at the start; make an thread - and start it - and make a new thread just after that, just in case
-            if v_next==0:
+            if v_next==0:                    
+        
                 v_current = play_vis_stim(vis_times,options[0],options[1],evt)
+
+                # hide/show the cb's
+                if MASK_OTHER_CB:
+                    side = v_current.getSide()
+                    if side=='left':
+                        right_cb.opacity = 0.
+                        left_cb.opacity = 1.
+                    elif side=='right':
+                        right_cb.opacity = 1.
+                        left_cb.opacity = 0.
+
                 v_current.start()
                 v_next = play_vis_stim(vis_times,options[0],options[1],evt)
             else:
@@ -1403,9 +1748,27 @@ while True:
                 # only start up the visual new thread once the current one is done (IF the task has a video element in it)
                 if not v_current.isAlive():     
                     v_current=v_next
+
+                    # do that again - setting it only whenever a new v_current is started...
+                    if MASK_OTHER_CB:
+                        side = v_current.getSide()
+                        if side=='left':
+                            right_cb.opacity = 0.
+                            left_cb.opacity = 1.
+                        elif side=='right':
+                            right_cb.opacity = 1.
+                            left_cb.opacity = 0.
+
                     v_current.start()
                     v_next = play_vis_stim(vis_times,options[0],options[1],evt)
 
+            # only set the checkerboard to true if it was off, first.
+            if not video_was_running:
+                print(' -- ENABLE CHECKERBOARD')
+                new_vis_contents = showCheckerboard(win,vis_contents)
+
+           # only set this to 1 if there is a task - 'video' in the task stack.
+            video_is_running = 1
 
         # handle the 'audio:
         if action=='audio':
@@ -1672,6 +2035,9 @@ continueRoutine=False
 
 # the Routine "end" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
+
+
+
 
 
 
